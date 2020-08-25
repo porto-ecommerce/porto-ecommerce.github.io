@@ -1,687 +1,76 @@
 <!DOCTYPE html>
 <html class="html" lang="pt-PT">
-
 <head>
 	<meta charset="UTF-8">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<title>Porto eCommerce &#8211;Desenvolvendo a solução do seu eCommerce</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-	<link rel='dns-prefetch' href='//s.w.org' />
-	<link rel="alternate" type="application/rss+xml" title="My Blog &raquo; Feed"
-		href="https://blinkstore.com.br/feed/" />
-	<link rel="alternate" type="application/rss+xml" title="My Blog &raquo; Feed de comentários"
-		href="https://blinkstore.com.br/comments/feed/" />
-	<script type="text/javascript">
-		window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/blinkstore.com.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5" } };
-		!function (e, a, t) { var r, n, o, i, p = a.createElement("canvas"), s = p.getContext && p.getContext("2d"); function c(e, t) { var a = String.fromCharCode; s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, e), 0, 0); var r = p.toDataURL(); return s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, t), 0, 0), r === p.toDataURL() } function l(e) { if (!s || !s.fillText) return !1; switch (s.textBaseline = "top", s.font = "600 32px Arial", e) { case "flag": return !c([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) && (!c([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !c([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447])); case "emoji": return !c([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212]) }return !1 } function d(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (i = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, o = 0; o < i.length; o++)t.supports[i[o]] = l(i[o]), t.supports.everything = t.supports.everything && t.supports[i[o]], "flag" !== i[o] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[i[o]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji), d(r.wpemoji))) }(window, document, window._wpemojiSettings);
-	</script>
-	<style type="text/css">
-		img.wp-smiley,
-		img.emoji {
-			display: inline !important;
-			border: none !important;
-			box-shadow: none !important;
-			height: 1em !important;
-			width: 1em !important;
-			margin: 0 .07em !important;
-			vertical-align: -0.1em !important;
-			background: none !important;
-			padding: 0 !important;
-		}
-	</style>
-	<link rel='stylesheet' id='wp-block-library-css'
-		href='https://blinkstore.com.br/wp-includes/css/dist/block-library/style.min.css?ver=5.5' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='wp-block-library-theme-css'
-		href='https://blinkstore.com.br/wp-includes/css/dist/block-library/theme.min.css?ver=5.5' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='font-awesome-css'
-		href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css?ver=5.11.2'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='simple-line-icons-css'
-		href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='magnific-popup-css'
-		href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/third/magnific-popup.min.css?ver=1.0.0'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='slick-css'
-		href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/third/slick.min.css?ver=1.6.0' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='oceanwp-style-css'
-		href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/style.min.css?ver=1.8.7' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='oceanwp-hamburgers-css'
-		href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/third/hamburgers/hamburgers.min.css?ver=1.8.7'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='oceanwp-3dx-css'
-		href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/third/hamburgers/types/3dx.css?ver=1.8.7'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='elementor-frontend-css'
-		href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.9.14' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='elementor-post-2503-css'
-		href='https://blinkstore.com.br/wp-content/uploads/elementor/css/post-2503.css?ver=1598330718' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='elementor-post-395-css'
-		href='https://blinkstore.com.br/wp-content/uploads/elementor/css/post-395.css?ver=1598337200' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='oceanwp-google-font-noto-sans-css'
-		href='//fonts.googleapis.com/css?family=Noto+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i&#038;subset=latin&#038;ver=5.5'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='oceanwp-google-font-gilda-display-css'
-		href='//fonts.googleapis.com/css?family=Gilda+Display%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i&#038;subset=latin&#038;ver=5.5'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='oceanwp-google-font-montserrat-css'
-		href='//fonts.googleapis.com/css?family=Montserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i&#038;subset=latin&#038;ver=5.5'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='oceanwp-google-font-josefin-sans-css'
-		href='//fonts.googleapis.com/css?family=Josefin+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i&#038;subset=latin&#038;ver=5.5'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='elementor-icons-css'
-		href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.7.0'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='elementor-animations-css'
-		href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.14'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='elementor-pro-css'
-		href='https://blinkstore.com.br/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=2.10.3'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='elementor-global-css'
-		href='https://blinkstore.com.br/wp-content/uploads/elementor/css/global.css?ver=1598328513' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='elementor-post-136-css'
-		href='https://blinkstore.com.br/wp-content/uploads/elementor/css/post-136.css?ver=1598385878' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='oe-widgets-style-css'
-		href='https://blinkstore.com.br/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=5.5' type='text/css'
-		media='all' />
-	<link rel='stylesheet' id='ops-product-share-style-css'
-		href='https://blinkstore.com.br/wp-content/plugins/ocean-product-sharing/assets/css/style.min.css?ver=5.5'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='oss-social-share-style-css'
-		href='https://blinkstore.com.br/wp-content/plugins/ocean-social-sharing/assets/css/style.min.css?ver=5.5'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='google-fonts-1-css'
-		href='https://fonts.googleapis.com/css?family=Carter+One%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoller+One%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRock+Salt%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.5'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='elementor-icons-shared-0-css'
-		href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='elementor-icons-fa-solid-css'
-		href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.12.0'
-		type='text/css' media='all' />
-	<link rel='stylesheet' id='elementor-icons-fa-brands-css'
-		href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.12.0'
-		type='text/css' media='all' />
-	<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'
-		id='jquery-js'></script>
-	<link rel="https://api.w.org/" href="https://blinkstore.com.br/wp-json/" />
-	<link rel="alternate" type="application/json" href="https://blinkstore.com.br/wp-json/wp/v2/pages/136" />
-	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blinkstore.com.br/xmlrpc.php?rsd" />
-	<link rel="wlwmanifest" type="application/wlwmanifest+xml"
-		href="https://blinkstore.com.br/wp-includes/wlwmanifest.xml" />
-	<meta name="generator" content="WordPress 5.5" />
-	<link rel="canonical" href="https://blinkstore.com.br/" />
-	<link rel='shortlink' href='https://blinkstore.com.br/' />
-	<link rel="alternate" type="application/json+oembed"
-		href="https://blinkstore.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblinkstore.com.br%2F" />
-	<link rel="alternate" type="text/xml+oembed"
-		href="https://blinkstore.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblinkstore.com.br%2F&#038;format=xml" />
-	<style type="text/css">
-		.recentcomments a {
-			display: inline !important;
-			padding: 0 !important;
-			margin: 0 !important;
-		}
-	</style>
-	<style type="text/css" id="wp-custom-css">
-		/* Footer button text color */
-		.elementor-element-7764eeb span.elementor-button-text {
-			color: #ffffff
-		}
-	</style>
-	<!-- OceanWP CSS -->
-	<style type="text/css">
-		/* General CSS */
-		a:hover,
-		a.light:hover,
-		.theme-heading .text::before,
-		#top-bar-content>a:hover,
-		#top-bar-social li.oceanwp-email a:hover,
-		#site-navigation-wrap .dropdown-menu>li>a:hover,
-		#site-header.medium-header #medium-searchform button:hover,
-		.oceanwp-mobile-menu-icon a:hover,
-		.blog-entry.post .blog-entry-header .entry-title a:hover,
-		.blog-entry.post .blog-entry-readmore a:hover,
-		.blog-entry.thumbnail-entry .blog-entry-category a,
-		ul.meta li a:hover,
-		.dropcap,
-		.single nav.post-navigation .nav-links .title,
-		body .related-post-title a:hover,
-		body #wp-calendar caption,
-		body .contact-info-widget.default i,
-		body .contact-info-widget.big-icons i,
-		body .custom-links-widget .oceanwp-custom-links li a:hover,
-		body .custom-links-widget .oceanwp-custom-links li a:hover:before,
-		body .posts-thumbnails-widget li a:hover,
-		body .social-widget li.oceanwp-email a:hover,
-		.comment-author .comment-meta .comment-reply-link,
-		#respond #cancel-comment-reply-link:hover,
-		#footer-widgets .footer-box a:hover,
-		#footer-bottom a:hover,
-		#footer-bottom #footer-bottom-menu a:hover,
-		.sidr a:hover,
-		.sidr-class-dropdown-toggle:hover,
-		.sidr-class-menu-item-has-children.active>a,
-		.sidr-class-menu-item-has-children.active>a>.sidr-class-dropdown-toggle,
-		input[type=checkbox]:checked:before {
-			color: #ffd401
-		}
+	<title>Porto eCommerce &#8211; Desenvolvendo a solução do seu eCommerce</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Porto eCommerce &raquo; Feed" href="" />
+<link rel="alternate" type="application/rss+xml" title="Porto eCommerce &raquo; Feed de comentários" href="" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blinkstore.com.br\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://blinkstore.com.br/wp-includes/css/dist/block-library/style.min.css?ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://blinkstore.com.br/wp-includes/css/dist/block-library/theme.min.css?ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css?ver=5.11.2' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-line-icons-css'  href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/third/magnific-popup.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-css'  href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/third/slick.min.css?ver=1.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-style-css'  href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/style.min.css?ver=1.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-hamburgers-css'  href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/third/hamburgers/hamburgers.min.css?ver=1.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-3dx-css'  href='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/css/third/hamburgers/types/3dx.css?ver=1.8.7' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css'  href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.9.14' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-2503-css'  href='https://blinkstore.com.br/wp-content/uploads/elementor/css/post-2503.css?ver=1598330718' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-395-css'  href='https://blinkstore.com.br/wp-content/uploads/elementor/css/post-395.css?ver=1598391373' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-google-font-noto-sans-css'  href='//fonts.googleapis.com/css?family=Noto+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i&#038;subset=latin&#038;ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-google-font-gilda-display-css'  href='//fonts.googleapis.com/css?family=Gilda+Display%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i&#038;subset=latin&#038;ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-google-font-montserrat-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i&#038;subset=latin&#038;ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-google-font-josefin-sans-css'  href='//fonts.googleapis.com/css?family=Josefin+Sans%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i&#038;subset=latin&#038;ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css'  href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-animations-css'  href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.9.14' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-pro-css'  href='https://blinkstore.com.br/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=2.10.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-global-css'  href='https://blinkstore.com.br/wp-content/uploads/elementor/css/global.css?ver=1598328513' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-post-136-css'  href='https://blinkstore.com.br/wp-content/uploads/elementor/css/post-136.css?ver=1598391795' type='text/css' media='all' />
+<link rel='stylesheet' id='oe-widgets-style-css'  href='https://blinkstore.com.br/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='ops-product-share-style-css'  href='https://blinkstore.com.br/wp-content/plugins/ocean-product-sharing/assets/css/style.min.css?ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='oss-social-share-style-css'  href='https://blinkstore.com.br/wp-content/plugins/ocean-social-sharing/assets/css/style.min.css?ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Carter+One%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoller+One%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRock+Salt%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css'  href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css'  href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.12.0' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css'  href='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.12.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-js'></script>
+<link rel="https://api.w.org/" href="https://blinkstore.com.br/wp-json/" /><link rel="alternate" type="application/json" href="https://blinkstore.com.br/wp-json/wp/v2/pages/136" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blinkstore.com.br/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blinkstore.com.br/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 5.5" />
+<link rel="canonical" href="https://blinkstore.com.br/" />
+<link rel='shortlink' href='https://blinkstore.com.br/' />
+<link rel="alternate" type="application/json+oembed" href="https://blinkstore.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblinkstore.com.br%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://blinkstore.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblinkstore.com.br%2F&#038;format=xml" />
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>		<style type="text/css" id="wp-custom-css">
+			/* Footer button text color */.elementor-element-7764eeb span.elementor-button-text{color:#ffffff}		</style>
+		<!-- OceanWP CSS -->
+<style type="text/css">
+/* General CSS */a:hover,a.light:hover,.theme-heading .text::before,#top-bar-content >a:hover,#top-bar-social li.oceanwp-email a:hover,#site-navigation-wrap .dropdown-menu >li >a:hover,#site-header.medium-header #medium-searchform button:hover,.oceanwp-mobile-menu-icon a:hover,.blog-entry.post .blog-entry-header .entry-title a:hover,.blog-entry.post .blog-entry-readmore a:hover,.blog-entry.thumbnail-entry .blog-entry-category a,ul.meta li a:hover,.dropcap,.single nav.post-navigation .nav-links .title,body .related-post-title a:hover,body #wp-calendar caption,body .contact-info-widget.default i,body .contact-info-widget.big-icons i,body .custom-links-widget .oceanwp-custom-links li a:hover,body .custom-links-widget .oceanwp-custom-links li a:hover:before,body .posts-thumbnails-widget li a:hover,body .social-widget li.oceanwp-email a:hover,.comment-author .comment-meta .comment-reply-link,#respond #cancel-comment-reply-link:hover,#footer-widgets .footer-box a:hover,#footer-bottom a:hover,#footer-bottom #footer-bottom-menu a:hover,.sidr a:hover,.sidr-class-dropdown-toggle:hover,.sidr-class-menu-item-has-children.active >a,.sidr-class-menu-item-has-children.active >a >.sidr-class-dropdown-toggle,input[type=checkbox]:checked:before{color:#ffd401}input[type="button"],input[type="reset"],input[type="submit"],button[type="submit"],.button,#site-navigation-wrap .dropdown-menu >li.btn >a >span,.thumbnail:hover i,.post-quote-content,.omw-modal .omw-close-modal,body .contact-info-widget.big-icons li:hover i,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button{background-color:#ffd401}.widget-title{border-color:#ffd401}blockquote{border-color:#ffd401}#searchform-dropdown{border-color:#ffd401}.dropdown-menu .sub-menu{border-color:#ffd401}.blog-entry.large-entry .blog-entry-readmore a:hover{border-color:#ffd401}.oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#ffd401}.social-widget li.oceanwp-email a:hover{border-color:#ffd401}#respond #cancel-comment-reply-link:hover{border-color:#ffd401}body .contact-info-widget.big-icons li:hover i{border-color:#ffd401}#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#ffd401}input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,button[type="submit"]:hover,input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus,button[type="submit"]:focus,.button:hover,#site-navigation-wrap .dropdown-menu >li.btn >a:hover >span,.post-quote-author,.omw-modal .omw-close-modal:hover,body div.wpforms-container-full .wpforms-form input[type=submit]:hover,body div.wpforms-container-full .wpforms-form button[type=submit]:hover,body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover{background-color:#e09d00}table th,table td,hr,.content-area,body.content-left-sidebar #content-wrap .content-area,.content-left-sidebar .content-area,#top-bar-wrap,#site-header,#site-header.top-header #search-toggle,.dropdown-menu ul li,.centered-minimal-page-header,.blog-entry.post,.blog-entry.grid-entry .blog-entry-inner,.blog-entry.thumbnail-entry .blog-entry-bottom,.single-post .entry-title,.single .entry-share-wrap .entry-share,.single .entry-share,.single .entry-share ul li a,.single nav.post-navigation,.single nav.post-navigation .nav-links .nav-previous,#author-bio,#author-bio .author-bio-avatar,#author-bio .author-bio-social li a,#related-posts,#comments,.comment-body,#respond #cancel-comment-reply-link,#blog-entries .type-page,.page-numbers a,.page-numbers span:not(.elementor-screen-only),.page-links span,body #wp-calendar caption,body #wp-calendar th,body #wp-calendar tbody,body .contact-info-widget.default i,body .contact-info-widget.big-icons i,body .posts-thumbnails-widget li,body .tagcloud a{border-color:}a:hover{color:#00d8c6}#scroll-top{background-color:rgba(0,113,242,0.37)}#scroll-top:hover{background-color:rgba(0,113,242,0.74)}form input[type="text"],form input[type="password"],form input[type="email"],form input[type="url"],form input[type="date"],form input[type="month"],form input[type="time"],form input[type="datetime"],form input[type="datetime-local"],form input[type="week"],form input[type="number"],form input[type="search"],form input[type="tel"],form input[type="color"],form select,form textarea,.woocommerce .woocommerce-checkout .select2-container--default .select2-selection--single{border-radius:2px}body div.wpforms-container-full .wpforms-form input[type=date],body div.wpforms-container-full .wpforms-form input[type=datetime],body div.wpforms-container-full .wpforms-form input[type=datetime-local],body div.wpforms-container-full .wpforms-form input[type=email],body div.wpforms-container-full .wpforms-form input[type=month],body div.wpforms-container-full .wpforms-form input[type=number],body div.wpforms-container-full .wpforms-form input[type=password],body div.wpforms-container-full .wpforms-form input[type=range],body div.wpforms-container-full .wpforms-form input[type=search],body div.wpforms-container-full .wpforms-form input[type=tel],body div.wpforms-container-full .wpforms-form input[type=text],body div.wpforms-container-full .wpforms-form input[type=time],body div.wpforms-container-full .wpforms-form input[type=url],body div.wpforms-container-full .wpforms-form input[type=week],body div.wpforms-container-full .wpforms-form select,body div.wpforms-container-full .wpforms-form textarea{border-radius:2px}form input[type="text"],form input[type="password"],form input[type="email"],form input[type="url"],form input[type="date"],form input[type="month"],form input[type="time"],form input[type="datetime"],form input[type="datetime-local"],form input[type="week"],form input[type="number"],form input[type="search"],form input[type="tel"],form input[type="color"],form select,form textarea,.select2-container .select2-choice,.woocommerce .woocommerce-checkout .select2-container--default .select2-selection--single{border-color:#dbdbdb}body div.wpforms-container-full .wpforms-form input[type=date],body div.wpforms-container-full .wpforms-form input[type=datetime],body div.wpforms-container-full .wpforms-form input[type=datetime-local],body div.wpforms-container-full .wpforms-form input[type=email],body div.wpforms-container-full .wpforms-form input[type=month],body div.wpforms-container-full .wpforms-form input[type=number],body div.wpforms-container-full .wpforms-form input[type=password],body div.wpforms-container-full .wpforms-form input[type=range],body div.wpforms-container-full .wpforms-form input[type=search],body div.wpforms-container-full .wpforms-form input[type=tel],body div.wpforms-container-full .wpforms-form input[type=text],body div.wpforms-container-full .wpforms-form input[type=time],body div.wpforms-container-full .wpforms-form input[type=url],body div.wpforms-container-full .wpforms-form input[type=week],body div.wpforms-container-full .wpforms-form select,body div.wpforms-container-full .wpforms-form textarea{border-color:#dbdbdb}form input[type="text"]:focus,form input[type="password"]:focus,form input[type="email"]:focus,form input[type="tel"]:focus,form input[type="url"]:focus,form input[type="search"]:focus,form textarea:focus,.select2-drop-active,.select2-dropdown-open.select2-drop-above .select2-choice,.select2-dropdown-open.select2-drop-above .select2-choices,.select2-drop.select2-drop-above.select2-drop-active,.select2-container-active .select2-choice,.select2-container-active .select2-choices{border-color:#e5e5e5}body div.wpforms-container-full .wpforms-form input:focus,body div.wpforms-container-full .wpforms-form textarea:focus,body div.wpforms-container-full .wpforms-form select:focus{border-color:#e5e5e5}form input[type="text"],form input[type="password"],form input[type="email"],form input[type="url"],form input[type="date"],form input[type="month"],form input[type="time"],form input[type="datetime"],form input[type="datetime-local"],form input[type="week"],form input[type="number"],form input[type="search"],form input[type="tel"],form input[type="color"],form select,form textarea,.woocommerce .woocommerce-checkout .select2-container--default .select2-selection--single{background-color:#fcfcfc}body div.wpforms-container-full .wpforms-form input[type=date],body div.wpforms-container-full .wpforms-form input[type=datetime],body div.wpforms-container-full .wpforms-form input[type=datetime-local],body div.wpforms-container-full .wpforms-form input[type=email],body div.wpforms-container-full .wpforms-form input[type=month],body div.wpforms-container-full .wpforms-form input[type=number],body div.wpforms-container-full .wpforms-form input[type=password],body div.wpforms-container-full .wpforms-form input[type=range],body div.wpforms-container-full .wpforms-form input[type=search],body div.wpforms-container-full .wpforms-form input[type=tel],body div.wpforms-container-full .wpforms-form input[type=text],body div.wpforms-container-full .wpforms-form input[type=time],body div.wpforms-container-full .wpforms-form input[type=url],body div.wpforms-container-full .wpforms-form input[type=week],body div.wpforms-container-full .wpforms-form select,body div.wpforms-container-full .wpforms-form textarea{background-color:#fcfcfc}.theme-button,input[type="submit"],button[type="submit"],button,.button,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button{border-radius:3px}body .theme-button,body input[type="submit"],body button[type="submit"],body button,body .button,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button{background-color:#00d8c6}body .theme-button,body input[type="submit"],body button[type="submit"],body button,body .button,body div.wpforms-container-full .wpforms-form input[type=submit],body div.wpforms-container-full .wpforms-form button[type=submit],body div.wpforms-container-full .wpforms-form .wpforms-page-button{color:#634c00}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:86px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,.after-header-content-inner >a{line-height:86px}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:279px}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:199px}#site-logo a.site-logo-text{color:#00d8c6}#site-logo a.site-logo-text:hover{color:#00dfe2}.effect-one #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-three #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after{background-color:#ffffff}.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{color:#ffffff}.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{text-shadow:10px 0 #ffffff,-10px 0 #ffffff}#site-navigation-wrap .dropdown-menu >li >a{padding:0 20px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,#searchform-header-replace-close{color:#525761}#site-navigation-wrap .dropdown-menu >li >a:hover,.oceanwp-mobile-menu-icon a:hover,#searchform-header-replace-close:hover{color:#f2f2f2}.dropdown-menu .sub-menu,#searchform-dropdown,.current-shop-items-dropdown{border-color:#00d8c6}.dropdown-menu ul li a.menu-link:hover{color:#ffffff}.navigation li.mega-cat .mega-cat-title{background-color:#00d8c6}.navigation li.mega-cat .mega-cat-title{color:#ffffff}.navigation li.mega-cat ul li .mega-post-title a:hover{color:#c4c4c4}.navigation li.mega-cat ul li .mega-post-date{color:#00d8c6}.mobile-menu .hamburger-inner,.mobile-menu .hamburger-inner::before,.mobile-menu .hamburger-inner::after{background-color:#000000}#sidr,#mobile-dropdown{background-color:rgba(255,255,255,0.95)}/* Sidebar CSS */.widget-title{border-color:#00d8c6}/* Footer Widgets CSS */#footer-widgets{padding:0}#footer-widgets,#footer-widgets p,#footer-widgets li a:before,#footer-widgets .contact-info-widget span.oceanwp-contact-title,#footer-widgets .recent-posts-date,#footer-widgets .recent-posts-comments,#footer-widgets .widget-recent-posts-icons li .fa{color:#ffffff}#footer-widgets .footer-box a:hover,#footer-widgets a:hover{color:#00d8c6}/* Footer Bottom CSS */#footer-bottom a:hover,#footer-bottom #footer-bottom-menu a:hover{color:#00d8c6}/* Typography CSS */body{font-family:Noto Sans;font-size:15px}h1{font-family:Gilda Display}#site-logo a.site-logo-text{font-size:35px}#top-bar-content,#top-bar-social-alt{font-size:13px;letter-spacing:.4px}#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a{font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase}.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{font-weight:600;font-size:26px;letter-spacing:2px;text-transform:uppercase}.blog-entry.post .blog-entry-header .entry-title a{font-family:Montserrat;font-weight:700;color:#525252;letter-spacing:1px}.single-post .entry-title{font-family:Montserrat;font-weight:700;color:#525252;letter-spacing:1px}#footer-bottom #copyright{font-family:Josefin Sans;letter-spacing:1px;text-transform:uppercase}
+</style></head>
 
-		input[type="button"],
-		input[type="reset"],
-		input[type="submit"],
-		button[type="submit"],
-		.button,
-		#site-navigation-wrap .dropdown-menu>li.btn>a>span,
-		.thumbnail:hover i,
-		.post-quote-content,
-		.omw-modal .omw-close-modal,
-		body .contact-info-widget.big-icons li:hover i,
-		body div.wpforms-container-full .wpforms-form input[type=submit],
-		body div.wpforms-container-full .wpforms-form button[type=submit],
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button {
-			background-color: #ffd401
-		}
-
-		.widget-title {
-			border-color: #ffd401
-		}
-
-		blockquote {
-			border-color: #ffd401
-		}
-
-		#searchform-dropdown {
-			border-color: #ffd401
-		}
-
-		.dropdown-menu .sub-menu {
-			border-color: #ffd401
-		}
-
-		.blog-entry.large-entry .blog-entry-readmore a:hover {
-			border-color: #ffd401
-		}
-
-		.oceanwp-newsletter-form-wrap input[type="email"]:focus {
-			border-color: #ffd401
-		}
-
-		.social-widget li.oceanwp-email a:hover {
-			border-color: #ffd401
-		}
-
-		#respond #cancel-comment-reply-link:hover {
-			border-color: #ffd401
-		}
-
-		body .contact-info-widget.big-icons li:hover i {
-			border-color: #ffd401
-		}
-
-		#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"]:focus {
-			border-color: #ffd401
-		}
-
-		input[type="button"]:hover,
-		input[type="reset"]:hover,
-		input[type="submit"]:hover,
-		button[type="submit"]:hover,
-		input[type="button"]:focus,
-		input[type="reset"]:focus,
-		input[type="submit"]:focus,
-		button[type="submit"]:focus,
-		.button:hover,
-		#site-navigation-wrap .dropdown-menu>li.btn>a:hover>span,
-		.post-quote-author,
-		.omw-modal .omw-close-modal:hover,
-		body div.wpforms-container-full .wpforms-form input[type=submit]:hover,
-		body div.wpforms-container-full .wpforms-form button[type=submit]:hover,
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover {
-			background-color: #e09d00
-		}
-
-		table th,
-		table td,
-		hr,
-		.content-area,
-		body.content-left-sidebar #content-wrap .content-area,
-		.content-left-sidebar .content-area,
-		#top-bar-wrap,
-		#site-header,
-		#site-header.top-header #search-toggle,
-		.dropdown-menu ul li,
-		.centered-minimal-page-header,
-		.blog-entry.post,
-		.blog-entry.grid-entry .blog-entry-inner,
-		.blog-entry.thumbnail-entry .blog-entry-bottom,
-		.single-post .entry-title,
-		.single .entry-share-wrap .entry-share,
-		.single .entry-share,
-		.single .entry-share ul li a,
-		.single nav.post-navigation,
-		.single nav.post-navigation .nav-links .nav-previous,
-		#author-bio,
-		#author-bio .author-bio-avatar,
-		#author-bio .author-bio-social li a,
-		#related-posts,
-		#comments,
-		.comment-body,
-		#respond #cancel-comment-reply-link,
-		#blog-entries .type-page,
-		.page-numbers a,
-		.page-numbers span:not(.elementor-screen-only),
-		.page-links span,
-		body #wp-calendar caption,
-		body #wp-calendar th,
-		body #wp-calendar tbody,
-		body .contact-info-widget.default i,
-		body .contact-info-widget.big-icons i,
-		body .posts-thumbnails-widget li,
-		body .tagcloud a {
-			border-color:
-		}
-
-		a:hover {
-			color: #00d8c6
-		}
-
-		#scroll-top {
-			background-color: #00d8c6
-		}
-
-		#scroll-top:hover {
-			background-color: #00dfe2
-		}
-
-		form input[type="text"],
-		form input[type="password"],
-		form input[type="email"],
-		form input[type="url"],
-		form input[type="date"],
-		form input[type="month"],
-		form input[type="time"],
-		form input[type="datetime"],
-		form input[type="datetime-local"],
-		form input[type="week"],
-		form input[type="number"],
-		form input[type="search"],
-		form input[type="tel"],
-		form input[type="color"],
-		form select,
-		form textarea,
-		.woocommerce .woocommerce-checkout .select2-container--default .select2-selection--single {
-			border-radius: 2px
-		}
-
-		body div.wpforms-container-full .wpforms-form input[type=date],
-		body div.wpforms-container-full .wpforms-form input[type=datetime],
-		body div.wpforms-container-full .wpforms-form input[type=datetime-local],
-		body div.wpforms-container-full .wpforms-form input[type=email],
-		body div.wpforms-container-full .wpforms-form input[type=month],
-		body div.wpforms-container-full .wpforms-form input[type=number],
-		body div.wpforms-container-full .wpforms-form input[type=password],
-		body div.wpforms-container-full .wpforms-form input[type=range],
-		body div.wpforms-container-full .wpforms-form input[type=search],
-		body div.wpforms-container-full .wpforms-form input[type=tel],
-		body div.wpforms-container-full .wpforms-form input[type=text],
-		body div.wpforms-container-full .wpforms-form input[type=time],
-		body div.wpforms-container-full .wpforms-form input[type=url],
-		body div.wpforms-container-full .wpforms-form input[type=week],
-		body div.wpforms-container-full .wpforms-form select,
-		body div.wpforms-container-full .wpforms-form textarea {
-			border-radius: 2px
-		}
-
-		form input[type="text"],
-		form input[type="password"],
-		form input[type="email"],
-		form input[type="url"],
-		form input[type="date"],
-		form input[type="month"],
-		form input[type="time"],
-		form input[type="datetime"],
-		form input[type="datetime-local"],
-		form input[type="week"],
-		form input[type="number"],
-		form input[type="search"],
-		form input[type="tel"],
-		form input[type="color"],
-		form select,
-		form textarea,
-		.select2-container .select2-choice,
-		.woocommerce .woocommerce-checkout .select2-container--default .select2-selection--single {
-			border-color: #dbdbdb
-		}
-
-		body div.wpforms-container-full .wpforms-form input[type=date],
-		body div.wpforms-container-full .wpforms-form input[type=datetime],
-		body div.wpforms-container-full .wpforms-form input[type=datetime-local],
-		body div.wpforms-container-full .wpforms-form input[type=email],
-		body div.wpforms-container-full .wpforms-form input[type=month],
-		body div.wpforms-container-full .wpforms-form input[type=number],
-		body div.wpforms-container-full .wpforms-form input[type=password],
-		body div.wpforms-container-full .wpforms-form input[type=range],
-		body div.wpforms-container-full .wpforms-form input[type=search],
-		body div.wpforms-container-full .wpforms-form input[type=tel],
-		body div.wpforms-container-full .wpforms-form input[type=text],
-		body div.wpforms-container-full .wpforms-form input[type=time],
-		body div.wpforms-container-full .wpforms-form input[type=url],
-		body div.wpforms-container-full .wpforms-form input[type=week],
-		body div.wpforms-container-full .wpforms-form select,
-		body div.wpforms-container-full .wpforms-form textarea {
-			border-color: #dbdbdb
-		}
-
-		form input[type="text"]:focus,
-		form input[type="password"]:focus,
-		form input[type="email"]:focus,
-		form input[type="tel"]:focus,
-		form input[type="url"]:focus,
-		form input[type="search"]:focus,
-		form textarea:focus,
-		.select2-drop-active,
-		.select2-dropdown-open.select2-drop-above .select2-choice,
-		.select2-dropdown-open.select2-drop-above .select2-choices,
-		.select2-drop.select2-drop-above.select2-drop-active,
-		.select2-container-active .select2-choice,
-		.select2-container-active .select2-choices {
-			border-color: #e5e5e5
-		}
-
-		body div.wpforms-container-full .wpforms-form input:focus,
-		body div.wpforms-container-full .wpforms-form textarea:focus,
-		body div.wpforms-container-full .wpforms-form select:focus {
-			border-color: #e5e5e5
-		}
-
-		form input[type="text"],
-		form input[type="password"],
-		form input[type="email"],
-		form input[type="url"],
-		form input[type="date"],
-		form input[type="month"],
-		form input[type="time"],
-		form input[type="datetime"],
-		form input[type="datetime-local"],
-		form input[type="week"],
-		form input[type="number"],
-		form input[type="search"],
-		form input[type="tel"],
-		form input[type="color"],
-		form select,
-		form textarea,
-		.woocommerce .woocommerce-checkout .select2-container--default .select2-selection--single {
-			background-color: #fcfcfc
-		}
-
-		body div.wpforms-container-full .wpforms-form input[type=date],
-		body div.wpforms-container-full .wpforms-form input[type=datetime],
-		body div.wpforms-container-full .wpforms-form input[type=datetime-local],
-		body div.wpforms-container-full .wpforms-form input[type=email],
-		body div.wpforms-container-full .wpforms-form input[type=month],
-		body div.wpforms-container-full .wpforms-form input[type=number],
-		body div.wpforms-container-full .wpforms-form input[type=password],
-		body div.wpforms-container-full .wpforms-form input[type=range],
-		body div.wpforms-container-full .wpforms-form input[type=search],
-		body div.wpforms-container-full .wpforms-form input[type=tel],
-		body div.wpforms-container-full .wpforms-form input[type=text],
-		body div.wpforms-container-full .wpforms-form input[type=time],
-		body div.wpforms-container-full .wpforms-form input[type=url],
-		body div.wpforms-container-full .wpforms-form input[type=week],
-		body div.wpforms-container-full .wpforms-form select,
-		body div.wpforms-container-full .wpforms-form textarea {
-			background-color: #fcfcfc
-		}
-
-		.theme-button,
-		input[type="submit"],
-		button[type="submit"],
-		button,
-		.button,
-		body div.wpforms-container-full .wpforms-form input[type=submit],
-		body div.wpforms-container-full .wpforms-form button[type=submit],
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button {
-			border-radius: 3px
-		}
-
-		body .theme-button,
-		body input[type="submit"],
-		body button[type="submit"],
-		body button,
-		body .button,
-		body div.wpforms-container-full .wpforms-form input[type=submit],
-		body div.wpforms-container-full .wpforms-form button[type=submit],
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button {
-			background-color: #00d8c6
-		}
-
-		body .theme-button,
-		body input[type="submit"],
-		body button[type="submit"],
-		body button,
-		body .button,
-		body div.wpforms-container-full .wpforms-form input[type=submit],
-		body div.wpforms-container-full .wpforms-form button[type=submit],
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button {
-			color: #634c00
-		}
-
-		/* Header CSS */
-		#site-logo #site-logo-inner,
-		.oceanwp-social-menu .social-menu-inner,
-		#site-header.full_screen-header .menu-bar-inner,
-		.after-header-content .after-header-content-inner {
-			height: 86px
-		}
-
-		#site-navigation-wrap .dropdown-menu>li>a,
-		.oceanwp-mobile-menu-icon a,
-		.after-header-content-inner>a {
-			line-height: 86px
-		}
-
-		#site-logo #site-logo-inner a img,
-		#site-header.center-header #site-navigation-wrap .middle-site-logo a img {
-			max-width: 279px
-		}
-
-		#site-header #site-logo #site-logo-inner a img,
-		#site-header.center-header #site-navigation-wrap .middle-site-logo a img {
-			max-height: 199px
-		}
-
-		#site-logo a.site-logo-text {
-			color: #00d8c6
-		}
-
-		#site-logo a.site-logo-text:hover {
-			color: #00dfe2
-		}
-
-		.effect-one #site-navigation-wrap .dropdown-menu>li>a.menu-link>span:after,
-		.effect-three #site-navigation-wrap .dropdown-menu>li>a.menu-link>span:after,
-		.effect-five #site-navigation-wrap .dropdown-menu>li>a.menu-link>span:before,
-		.effect-five #site-navigation-wrap .dropdown-menu>li>a.menu-link>span:after,
-		.effect-nine #site-navigation-wrap .dropdown-menu>li>a.menu-link>span:before,
-		.effect-nine #site-navigation-wrap .dropdown-menu>li>a.menu-link>span:after {
-			background-color: #ffffff
-		}
-
-		.effect-four #site-navigation-wrap .dropdown-menu>li>a.menu-link>span:before,
-		.effect-four #site-navigation-wrap .dropdown-menu>li>a.menu-link>span:after,
-		.effect-seven #site-navigation-wrap .dropdown-menu>li>a.menu-link:hover>span:after,
-		.effect-seven #site-navigation-wrap .dropdown-menu>li.sfHover>a.menu-link>span:after {
-			color: #ffffff
-		}
-
-		.effect-seven #site-navigation-wrap .dropdown-menu>li>a.menu-link:hover>span:after,
-		.effect-seven #site-navigation-wrap .dropdown-menu>li.sfHover>a.menu-link>span:after {
-			text-shadow: 10px 0 #ffffff, -10px 0 #ffffff
-		}
-
-		#site-navigation-wrap .dropdown-menu>li>a {
-			padding: 0 20px
-		}
-
-		#site-navigation-wrap .dropdown-menu>li>a,
-		.oceanwp-mobile-menu-icon a,
-		#searchform-header-replace-close {
-			color: #525761
-		}
-
-		#site-navigation-wrap .dropdown-menu>li>a:hover,
-		.oceanwp-mobile-menu-icon a:hover,
-		#searchform-header-replace-close:hover {
-			color: #f2f2f2
-		}
-
-		.dropdown-menu .sub-menu,
-		#searchform-dropdown,
-		.current-shop-items-dropdown {
-			border-color: #00d8c6
-		}
-
-		.dropdown-menu ul li a.menu-link:hover {
-			color: #ffffff
-		}
-
-		.navigation li.mega-cat .mega-cat-title {
-			background-color: #00d8c6
-		}
-
-		.navigation li.mega-cat .mega-cat-title {
-			color: #ffffff
-		}
-
-		.navigation li.mega-cat ul li .mega-post-title a:hover {
-			color: #c4c4c4
-		}
-
-		.navigation li.mega-cat ul li .mega-post-date {
-			color: #00d8c6
-		}
-
-		.mobile-menu .hamburger-inner,
-		.mobile-menu .hamburger-inner::before,
-		.mobile-menu .hamburger-inner::after {
-			background-color: #000000
-		}
-
-		#sidr,
-		#mobile-dropdown {
-			background-color: rgba(255, 255, 255, 0.95)
-		}
-
-		/* Sidebar CSS */
-		.widget-title {
-			border-color: #00d8c6
-		}
-
-		/* Footer Widgets CSS */
-		#footer-widgets {
-			padding: 0
-		}
-
-		#footer-widgets,
-		#footer-widgets p,
-		#footer-widgets li a:before,
-		#footer-widgets .contact-info-widget span.oceanwp-contact-title,
-		#footer-widgets .recent-posts-date,
-		#footer-widgets .recent-posts-comments,
-		#footer-widgets .widget-recent-posts-icons li .fa {
-			color: #ffffff
-		}
-
-		#footer-widgets .footer-box a:hover,
-		#footer-widgets a:hover {
-			color: #00d8c6
-		}
-
-		/* Footer Bottom CSS */
-		#footer-bottom a:hover,
-		#footer-bottom #footer-bottom-menu a:hover {
-			color: #00d8c6
-		}
-
-		/* Typography CSS */
-		body {
-			font-family: Noto Sans;
-			font-size: 15px
-		}
-
-		h1 {
-			font-family: Gilda Display
-		}
-
-		#site-logo a.site-logo-text {
-			font-size: 35px
-		}
-
-		#top-bar-content,
-		#top-bar-social-alt {
-			font-size: 13px;
-			letter-spacing: .4px
-		}
-
-		#site-navigation-wrap .dropdown-menu>li>a,
-		#site-header.full_screen-header .fs-dropdown-menu>li>a,
-		#site-header.top-header #site-navigation-wrap .dropdown-menu>li>a,
-		#site-header.center-header #site-navigation-wrap .dropdown-menu>li>a,
-		#site-header.medium-header #site-navigation-wrap .dropdown-menu>li>a,
-		.oceanwp-mobile-menu-icon a {
-			font-weight: 600;
-			font-size: 12px;
-			letter-spacing: 1px;
-			text-transform: uppercase
-		}
-
-		.page-header .page-header-title,
-		.page-header.background-image-page-header .page-header-title {
-			font-weight: 600;
-			font-size: 26px;
-			letter-spacing: 2px;
-			text-transform: uppercase
-		}
-
-		.blog-entry.post .blog-entry-header .entry-title a {
-			font-family: Montserrat;
-			font-weight: 700;
-			color: #525252;
-			letter-spacing: 1px
-		}
-
-		.single-post .entry-title {
-			font-family: Montserrat;
-			font-weight: 700;
-			color: #525252;
-			letter-spacing: 1px
-		}
-
-		#footer-bottom #copyright {
-			font-family: Josefin Sans;
-			letter-spacing: 1px;
-			text-transform: uppercase
-		}
-	</style>
-</head>
-
-<body
-	class="home page-template-default page page-id-136 wp-custom-logo wp-embed-responsive oceanwp-theme dropdown-mobile has-transparent-header no-header-border default-breakpoint content-full-screen page-with-background-title page-header-disabled has-breadcrumbs elementor-default elementor-kit-2376 elementor-page elementor-page-136"
-	itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<body class="home page-template-default page page-id-136 wp-custom-logo wp-embed-responsive oceanwp-theme dropdown-mobile has-transparent-header no-header-border default-breakpoint content-full-screen page-with-background-title page-header-disabled has-breadcrumbs elementor-default elementor-kit-2376 elementor-page elementor-page-136" itemscope="itemscope" itemtype="https://schema.org/WebPage">
 
 
 
@@ -693,1119 +82,801 @@
 		<div id="wrap" class="clr">
 
 
-			<div id="transparent-header-wrap" class="clr">
+				<div id="transparent-header-wrap" class="clr">
 
-				<header id="site-header" class="transparent-header clr" data-height="86" itemscope="itemscope"
-					itemtype="https://schema.org/WPHeader" role="banner">
-
-
-
-					<div id="site-header-inner" class="clr container">
+<header id="site-header" class="transparent-header clr" data-height="86" itemscope="itemscope" itemtype="https://schema.org/WPHeader" role="banner">
 
 
 
-
-						<div id="site-logo" class="clr" itemscope itemtype="https://schema.org/Brand">
-
-
-							<div id="site-logo-inner" class="clr">
-
-								<a href="https://blinkstore.com.br/" class="custom-logo-link" rel="home" aria-current="page"><img
-										width="2003" height="416" src="https://blinkstore.com.br/wp-content/uploads/2020/08/porto.png"
-										class="custom-logo" alt="My Blog" loading="lazy"
-										srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/porto.png 2003w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-300x62.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-1024x213.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-768x160.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-1536x319.png 1536w"
-										sizes="(max-width: 2003px) 100vw, 2003px" /></a>
-							</div><!-- #site-logo-inner -->
+			<div id="site-header-inner" class="clr container">
 
 
 
-						</div><!-- #site-logo -->
+
+<div id="site-logo" class="clr" itemscope itemtype="https://schema.org/Brand">
+
+
+	<div id="site-logo-inner" class="clr">
+
+		<a href="https://blinkstore.com.br/" class="custom-logo-link" rel="home" aria-current="page"><img width="2003" height="416" src="https://blinkstore.com.br/wp-content/uploads/2020/08/porto.png" class="custom-logo" alt="Porto eCommerce" loading="lazy" srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/porto.png 2003w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-300x62.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-1024x213.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-768x160.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-1536x319.png 1536w" sizes="(max-width: 2003px) 100vw, 2003px" /></a>
+	</div><!-- #site-logo-inner -->
 
 
 
-					</div><!-- #site-header-inner -->
+</div><!-- #site-logo -->
 
 
-					<div id="mobile-dropdown" class="clr">
 
-						<nav class="clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+			</div><!-- #site-header-inner -->
 
-							<div class="menu">
-								<li class="page_item page-item-136 current_page_item"><a href="https://blinkstore.com.br/"
-										aria-current="page">Home</a></li>
-							</div>
 
-						</nav>
+<div id="mobile-dropdown" class="clr" >
 
-					</div>
+	<nav class="clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+
+		<div class="menu"><li class="page_item page-item-136 current_page_item"><a href="https://blinkstore.com.br/" aria-current="page">Home</a></li>
+</div>
+
+	</nav>
+
+</div>
 
 
 
 
 
-				</header><!-- #site-header -->
+</header><!-- #site-header -->
 
+	</div>
+
+
+			<main id="main" class="site-main clr"  role="main">
+
+
+
+	<div id="content-wrap" class="container clr">
+
+
+		<div id="primary" class="content-area clr">
+
+
+			<div id="content" class="site-content clr">
+
+
+
+<article class="single-page-article clr">
+
+
+<div class="entry clr" itemprop="text">
+
+
+			<div data-elementor-type="wp-post" data-elementor-id="136" class="elementor elementor-136" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-5212a97 elementor-section-height-full elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="5212a97" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-96915ce elementor-column elementor-col-50 elementor-top-column" data-id="96915ce" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2178ca7 elementor-widget elementor-widget-text-editor" data-id="2178ca7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>VOCÊ TEM UM NEGÓCIO E PRECISA</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b7e0b98 elementor-widget elementor-widget-heading" data-id="b7e0b98" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">VENDER MAIS?</h2>		</div>
+				</div>
+				<section class="elementor-element elementor-element-a8b9fd0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="a8b9fd0" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-21ba793 elementor-column elementor-col-50 elementor-inner-column" data-id="21ba793" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-54687fd elementor-button-info elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="54687fd" data-element_type="widget" data-settings="{&quot;motion_fx_motion_fx_mouse&quot;:&quot;yes&quot;,&quot;_animation&quot;:&quot;fadeInLeft&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#contato" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">CONTATE-NOS</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
 			</div>
-
-
-			<main id="main" class="site-main clr" role="main">
-
-
-
-				<div id="content-wrap" class="container clr">
-
-
-					<div id="primary" class="content-area clr">
-
-
-						<div id="content" class="site-content clr">
-
-
-
-							<article class="single-page-article clr">
-
-
-								<div class="entry clr" itemprop="text">
-
-
-									<div data-elementor-type="wp-post" data-elementor-id="136" class="elementor elementor-136"
-										data-elementor-settings="[]">
-										<div class="elementor-inner">
-											<div class="elementor-section-wrap">
-												<section
-													class="elementor-element elementor-element-5212a97 elementor-section-height-full elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section"
-													data-id="5212a97" data-element_type="section"
-													data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-													<div class="elementor-background-overlay"></div>
-													<div class="elementor-container elementor-column-gap-default">
-														<div class="elementor-row">
-															<div
-																class="elementor-element elementor-element-96915ce elementor-column elementor-col-50 elementor-top-column"
-																data-id="96915ce" data-element_type="column">
-																<div class="elementor-column-wrap  elementor-element-populated">
-																	<div class="elementor-widget-wrap">
-																		<div
-																			class="elementor-element elementor-element-2178ca7 elementor-widget elementor-widget-text-editor"
-																			data-id="2178ca7" data-element_type="widget"
-																			data-widget_type="text-editor.default">
-																			<div class="elementor-widget-container">
-																				<div class="elementor-text-editor elementor-clearfix">
-																					<p>VOCÊ TEM UM NEGÓCIO E PRECISA</p>
-																				</div>
-																			</div>
-																		</div>
-																		<div
-																			class="elementor-element elementor-element-b7e0b98 elementor-widget elementor-widget-heading"
-																			data-id="b7e0b98" data-element_type="widget" data-widget_type="heading.default">
-																			<div class="elementor-widget-container">
-																				<h2 class="elementor-heading-title elementor-size-default">VENDER MAIS?</h2>
-																			</div>
-																		</div>
-																		<section
-																			class="elementor-element elementor-element-a8b9fd0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section"
-																			data-id="a8b9fd0" data-element_type="section">
-																			<div class="elementor-container elementor-column-gap-default">
-																				<div class="elementor-row">
-																					<div
-																						class="elementor-element elementor-element-21ba793 elementor-column elementor-col-50 elementor-inner-column"
-																						data-id="21ba793" data-element_type="column">
-																						<div class="elementor-column-wrap  elementor-element-populated">
-																							<div class="elementor-widget-wrap">
-																								<div
-																									class="elementor-element elementor-element-54687fd elementor-button-info elementor-align-center elementor-invisible elementor-widget elementor-widget-button"
-																									data-id="54687fd" data-element_type="widget"
-																									data-settings="{&quot;motion_fx_motion_fx_mouse&quot;:&quot;yes&quot;,&quot;_animation&quot;:&quot;fadeInLeft&quot;}"
-																									data-widget_type="button.default">
-																									<div class="elementor-widget-container">
-																										<div class="elementor-button-wrapper">
-																											<a href="#contato"
-																												class="elementor-button-link elementor-button elementor-size-sm"
-																												role="button">
-																												<span class="elementor-button-content-wrapper">
-																													<span class="elementor-button-text">CONTATE-NOS</span>
-																												</span>
-																											</a>
-																										</div>
-																									</div>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																					<div
-																						class="elementor-element elementor-element-9f02ec2 elementor-column elementor-col-50 elementor-inner-column"
-																						data-id="9f02ec2" data-element_type="column">
-																						<div class="elementor-column-wrap  elementor-element-populated">
-																							<div class="elementor-widget-wrap">
-																								<div
-																									class="elementor-element elementor-element-beb818b elementor-align-center elementor-invisible elementor-widget elementor-widget-button"
-																									data-id="beb818b" data-element_type="widget"
-																									data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}"
-																									data-widget_type="button.default">
-																									<div class="elementor-widget-container">
-																										<div class="elementor-button-wrapper">
-																											<a href="#servicos"
-																												class="elementor-button-link elementor-button elementor-size-sm"
-																												role="button">
-																												<span class="elementor-button-content-wrapper">
-																													<span class="elementor-button-text">TRABALHOS</span>
-																												</span>
-																											</a>
-																										</div>
-																									</div>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</section>
-																	</div>
-																</div>
-															</div>
-															<div
-																class="elementor-element elementor-element-1ae66bf elementor-column elementor-col-50 elementor-top-column"
-																data-id="1ae66bf" data-element_type="column">
-																<div class="elementor-column-wrap">
-																	<div class="elementor-widget-wrap">
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</section>
-												<section
-													class="elementor-element elementor-element-d30ef52 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-													data-id="d30ef52" data-element_type="section">
-													<div class="elementor-container elementor-column-gap-default">
-														<div class="elementor-row">
-															<div
-																class="elementor-element elementor-element-02c4e99 elementor-column elementor-col-100 elementor-top-column"
-																data-id="02c4e99" data-element_type="column">
-																<div class="elementor-column-wrap">
-																	<div class="elementor-widget-wrap">
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</section>
-												<section
-													class="elementor-element elementor-element-b5d03c8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-													data-id="b5d03c8" data-element_type="section">
-													<div class="elementor-container elementor-column-gap-default">
-														<div class="elementor-row">
-															<div
-																class="elementor-element elementor-element-aff6a0e elementor-column elementor-col-100 elementor-top-column"
-																data-id="aff6a0e" data-element_type="column">
-																<div class="elementor-column-wrap  elementor-element-populated">
-																	<div class="elementor-widget-wrap">
-																		<div
-																			class="elementor-element elementor-element-981c390 elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline"
-																			data-id="981c390" data-element_type="widget"
-																			data-settings="{&quot;highlighted_text&quot;:&quot;eCommerce&quot;,&quot;headline_style&quot;:&quot;highlight&quot;,&quot;marker&quot;:&quot;circle&quot;}"
-																			data-widget_type="animated-headline.default">
-																			<div class="elementor-widget-container">
-																				<h3 class="elementor-headline">
-																					<span
-																						class="elementor-headline-plain-text elementor-headline-text-wrapper">Desenvolvemos
-																						seu </span>
-																					<span
-																						class="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper"></span>
-																				</h3>
-																			</div>
-																		</div>
-																		<section
-																			class="elementor-element elementor-element-f21d27f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section"
-																			data-id="f21d27f" data-element_type="section">
-																			<div class="elementor-container elementor-column-gap-default">
-																				<div class="elementor-row">
-																					<div
-																						class="elementor-element elementor-element-cd4130e elementor-column elementor-col-50 elementor-inner-column"
-																						data-id="cd4130e" data-element_type="column">
-																						<div class="elementor-column-wrap  elementor-element-populated">
-																							<div class="elementor-widget-wrap">
-																								<div
-																									class="elementor-element elementor-element-3fc7876 elementor-widget elementor-widget-heading"
-																									data-id="3fc7876" data-element_type="widget"
-																									data-widget_type="heading.default">
-																									<div class="elementor-widget-container">
-																										<h2 class="elementor-heading-title elementor-size-default">
-																											Integração com os correios para cálculo de frete</h2>
-																									</div>
-																								</div>
-																								<div
-																									class="elementor-element elementor-element-cb750d2 elementor-widget elementor-widget-image"
-																									data-id="cb750d2" data-element_type="widget"
-																									data-widget_type="image.default">
-																									<div class="elementor-widget-container">
-																										<div class="elementor-image">
-																											<img
-																												src="https://blinkstore.com.br/wp-content/uploads/2020/08/correios-1024x572-1.jpg"
-																												title="correios-1024&#215;572 (1)"
-																												alt="correios-1024x572 (1)" /> </div>
-																									</div>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																					<div
-																						class="elementor-element elementor-element-d8f68aa elementor-column elementor-col-50 elementor-inner-column"
-																						data-id="d8f68aa" data-element_type="column">
-																						<div class="elementor-column-wrap  elementor-element-populated">
-																							<div class="elementor-widget-wrap">
-																								<div
-																									class="elementor-element elementor-element-c6b2413 elementor-widget elementor-widget-heading"
-																									data-id="c6b2413" data-element_type="widget"
-																									data-widget_type="heading.default">
-																									<div class="elementor-widget-container">
-																										<h2 class="elementor-heading-title elementor-size-default">
-																											Integração com os principais gateways de pagamento</h2>
-																									</div>
-																								</div>
-																								<div
-																									class="elementor-element elementor-element-acdc667 elementor-widget elementor-widget-image"
-																									data-id="acdc667" data-element_type="widget"
-																									data-widget_type="image.default">
-																									<div class="elementor-widget-container">
-																										<div class="elementor-image">
-																											<img
-																												src="https://blinkstore.com.br/wp-content/uploads/2020/08/pagseguro-ou-mercado-pago.png"
-																												title="pagseguro-ou-mercado-pago"
-																												alt="pagseguro-ou-mercado-pago" /> </div>
-																									</div>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</section>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</section>
-												<section
-													class="elementor-element elementor-element-5c3e6f8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-													data-id="5c3e6f8" data-element_type="section">
-													<div class="elementor-container elementor-column-gap-default">
-														<div class="elementor-row">
-															<div
-																class="elementor-element elementor-element-a81dd55 elementor-column elementor-col-100 elementor-top-column"
-																data-id="a81dd55" data-element_type="column">
-																<div class="elementor-column-wrap  elementor-element-populated">
-																	<div class="elementor-widget-wrap">
-																		<div
-																			class="elementor-element elementor-element-b22befc elementor-widget elementor-widget-heading"
-																			data-id="b22befc" data-element_type="widget" data-widget_type="heading.default">
-																			<div class="elementor-widget-container">
-																				<h2 class="elementor-heading-title elementor-size-default">Mais funcionalidades
-																				</h2>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</section>
-												<section
-													class="elementor-element elementor-element-7bc7866 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-													data-id="7bc7866" data-element_type="section">
-													<div class="elementor-container elementor-column-gap-default">
-														<div class="elementor-row">
-															<div
-																class="elementor-element elementor-element-11b8596 elementor-column elementor-col-50 elementor-top-column"
-																data-id="11b8596" data-element_type="column">
-																<div class="elementor-column-wrap  elementor-element-populated">
-																	<div class="elementor-widget-wrap">
-																		<div
-																			class="elementor-element elementor-element-a3735ee elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list"
-																			data-id="a3735ee" data-element_type="widget" data-widget_type="icon-list.default">
-																			<div class="elementor-widget-container">
-																				<ul class="elementor-icon-list-items">
-																					<li class="elementor-icon-list-item">
-																						<span class="elementor-icon-list-icon">
-																							<i aria-hidden="true" class="fas fa-check"></i> </span>
-																						<span class="elementor-icon-list-text">Carrinho de compras</span>
-																					</li>
-																					<li class="elementor-icon-list-item">
-																						<span class="elementor-icon-list-icon">
-																							<i aria-hidden="true" class="fas fa-check"></i> </span>
-																						<span class="elementor-icon-list-text">Gerenciamento de cupons de
-																							desconto</span>
-																					</li>
-																					<li class="elementor-icon-list-item">
-																						<span class="elementor-icon-list-icon">
-																							<i aria-hidden="true" class="fas fa-check"></i> </span>
-																						<span class="elementor-icon-list-text">Integração com email<br></span>
-																					</li>
-																					<li class="elementor-icon-list-item">
-																						<span class="elementor-icon-list-icon">
-																							<i aria-hidden="true" class="fas fa-check"></i> </span>
-																						<span class="elementor-icon-list-text">Lista de desejos</span>
-																					</li>
-																					<li class="elementor-icon-list-item">
-																						<span class="elementor-icon-list-icon">
-																							<i aria-hidden="true" class="fas fa-check"></i> </span>
-																						<span class="elementor-icon-list-text">Gerenciamento de produtos e
-																							pedidos</span>
-																					</li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<div
-																class="elementor-element elementor-element-2b2d2c8 elementor-column elementor-col-50 elementor-top-column"
-																data-id="2b2d2c8" data-element_type="column">
-																<div class="elementor-column-wrap  elementor-element-populated">
-																	<div class="elementor-widget-wrap">
-																		<div
-																			class="elementor-element elementor-element-caa8581 elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list"
-																			data-id="caa8581" data-element_type="widget" data-widget_type="icon-list.default">
-																			<div class="elementor-widget-container">
-																				<ul class="elementor-icon-list-items">
-																					<li class="elementor-icon-list-item">
-																						<span class="elementor-icon-list-icon">
-																							<i aria-hidden="true" class="fas fa-check"></i> </span>
-																						<span class="elementor-icon-list-text">Integração de catálogo com Facebook e
-																							Instagram</span>
-																					</li>
-																					<li class="elementor-icon-list-item">
-																						<span class="elementor-icon-list-icon">
-																							<i aria-hidden="true" class="fas fa-check"></i> </span>
-																						<span class="elementor-icon-list-text">Taxas de envio personalizáveis</span>
-																					</li>
-																					<li class="elementor-icon-list-item">
-																						<span class="elementor-icon-list-icon">
-																							<i aria-hidden="true" class="fas fa-check"></i> </span>
-																						<span class="elementor-icon-list-text">Sacolinha de produtos no
-																							instagram</span>
-																					</li>
-																					<li class="elementor-icon-list-item">
-																						<span class="elementor-icon-list-icon">
-																							<i aria-hidden="true" class="fas fa-check"></i> </span>
-																						<span class="elementor-icon-list-text">Pagamento seguro e trasparente ao
-																							cliente</span>
-																					</li>
-																					<li class="elementor-icon-list-item">
-																						<span class="elementor-icon-list-icon">
-																							<i aria-hidden="true" class="fas fa-check"></i> </span>
-																						<span class="elementor-icon-list-text">Criação de promoções</span>
-																					</li>
-																				</ul>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</section>
-												<section
-													class="elementor-element elementor-element-ce02b41 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-													data-id="ce02b41" data-element_type="section">
-													<div class="elementor-container elementor-column-gap-default">
-														<div class="elementor-row">
-															<div
-																class="elementor-element elementor-element-6d89173 elementor-column elementor-col-100 elementor-top-column"
-																data-id="6d89173" data-element_type="column">
-																<div class="elementor-column-wrap  elementor-element-populated">
-																	<div class="elementor-widget-wrap">
-																		<div
-																			class="elementor-element elementor-element-2e8a3fba elementor-widget elementor-widget-heading"
-																			data-id="2e8a3fba" data-element_type="widget" data-widget_type="heading.default">
-																			<div class="elementor-widget-container">
-																				<h4 class="elementor-heading-title elementor-size-default">Nossos trabalhos
-																					recentes</h4>
-																			</div>
-																		</div>
-																		<div
-																			class="elementor-element elementor-element-a51e7d9 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
-																			data-id="a51e7d9" data-element_type="widget"
-																			data-widget_type="theme-post-featured-image.default">
-																			<div class="elementor-widget-container">
-																				<div class="elementor-image">
-																					<img width="1024" height="471"
-																						src="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.56.22-1024x471.png"
-																						class="attachment-large size-large" alt="" loading="lazy"
-																						srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.56.22-1024x471.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.56.22-300x138.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.56.22-768x354.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.56.22.png 1440w"
-																						sizes="(max-width: 1024px) 100vw, 1024px" /> </div>
-																			</div>
-																		</div>
-																		<div
-																			class="elementor-element elementor-element-cbf6d3a elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
-																			data-id="cbf6d3a" data-element_type="widget"
-																			data-widget_type="theme-post-featured-image.default">
-																			<div class="elementor-widget-container">
-																				<div class="elementor-image">
-																					<img width="1024" height="500"
-																						src="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.58.51-1024x500.png"
-																						class="attachment-large size-large" alt="" loading="lazy"
-																						srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.58.51-1024x500.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.58.51-300x146.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.58.51-768x375.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.58.51.png 1438w"
-																						sizes="(max-width: 1024px) 100vw, 1024px" /> </div>
-																			</div>
-																		</div>
-																		<div
-																			class="elementor-element elementor-element-c86e272 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
-																			data-id="c86e272" data-element_type="widget"
-																			data-widget_type="theme-post-featured-image.default">
-																			<div class="elementor-widget-container">
-																				<div class="elementor-image">
-																					<img width="1024" height="501"
-																						src="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-03.02.27-1024x501.png"
-																						class="attachment-large size-large" alt="" loading="lazy"
-																						srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-03.02.27-1024x501.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-03.02.27-300x147.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-03.02.27-768x376.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-03.02.27.png 1436w"
-																						sizes="(max-width: 1024px) 100vw, 1024px" /> </div>
-																			</div>
-																		</div>
-																		<div
-																			class="elementor-element elementor-element-c66b4b4 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
-																			data-id="c66b4b4" data-element_type="widget"
-																			data-widget_type="theme-post-featured-image.default">
-																			<div class="elementor-widget-container">
-																				<div class="elementor-image">
-																					<img width="1024" height="499"
-																						src="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-17.03.05-1024x499.png"
-																						class="attachment-large size-large" alt="" loading="lazy"
-																						srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-17.03.05-1024x499.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-17.03.05-300x146.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-17.03.05-768x374.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-17.03.05.png 1440w"
-																						sizes="(max-width: 1024px) 100vw, 1024px" /> </div>
-																			</div>
-																		</div>
-																		<div
-																			class="elementor-element elementor-element-8c1e65a elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
-																			data-id="8c1e65a" data-element_type="widget"
-																			data-widget_type="theme-post-featured-image.default">
-																			<div class="elementor-widget-container">
-																				<div class="elementor-image">
-																					<img width="1024" height="472"
-																						src="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.55.11-1024x472.png"
-																						class="attachment-large size-large" alt="" loading="lazy"
-																						srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.55.11-1024x472.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.55.11-300x138.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.55.11-768x354.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.55.11.png 1439w"
-																						sizes="(max-width: 1024px) 100vw, 1024px" /> </div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</section>
-												<section
-													class="elementor-element elementor-element-572ee4ad elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-													data-id="572ee4ad" data-element_type="section">
-													<div class="elementor-container elementor-column-gap-no">
-														<div class="elementor-row">
-															<div
-																class="elementor-element elementor-element-6865c618 elementor-column elementor-col-100 elementor-top-column"
-																data-id="6865c618" data-element_type="column">
-																<div class="elementor-column-wrap  elementor-element-populated">
-																	<div class="elementor-widget-wrap">
-																		<div
-																			class="elementor-element elementor-element-6e4fbfe elementor-widget elementor-widget-menu-anchor"
-																			data-id="6e4fbfe" data-element_type="widget"
-																			data-widget_type="menu-anchor.default">
-																			<div class="elementor-widget-container">
-																				<div id="contato" class="elementor-menu-anchor"></div>
-																			</div>
-																		</div>
-																		<div
-																			class="elementor-element elementor-element-48dcc35c elementor-widget elementor-widget-heading"
-																			data-id="48dcc35c" data-element_type="widget" data-widget_type="heading.default">
-																			<div class="elementor-widget-container">
-																				<h3 class="elementor-heading-title elementor-size-default">Solicite um orçamento
-																				</h3>
-																			</div>
-																		</div>
-																		<section
-																			class="elementor-element elementor-element-36997f55 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section"
-																			data-id="36997f55" data-element_type="section">
-																			<div class="elementor-container elementor-column-gap-no">
-																				<div class="elementor-row">
-																					<div
-																						class="elementor-element elementor-element-42504b64 elementor-column elementor-col-50 elementor-inner-column"
-																						data-id="42504b64" data-element_type="column">
-																						<div class="elementor-column-wrap  elementor-element-populated">
-																							<div class="elementor-widget-wrap">
-																								<div
-																									class="elementor-element elementor-element-4b482126 elementor-button-align-end elementor-mobile-button-align-center elementor-widget elementor-widget-form"
-																									data-id="4b482126" data-element_type="widget"
-																									data-settings="{&quot;step_next_label&quot;:&quot;Pr\u00f3ximo&quot;,&quot;step_previous_label&quot;:&quot;Anterior&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
-																									data-widget_type="form.default">
-																									<div class="elementor-widget-container">
-																										<form class="elementor-form" method="post" name="New Form">
-																											<input type="hidden" name="post_id" value="136" />
-																											<input type="hidden" name="form_id" value="4b482126" />
-
-																											<input type="hidden" name="queried_id" value="136" />
-
-																											<div class="elementor-form-fields-wrapper elementor-labels-">
-																												<div
-																													class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50">
-																													<label for="form-field-name"
-																														class="elementor-field-label elementor-screen-only">Nome</label><input
-																														size="1" type="text" name="form_fields[name]"
-																														id="form-field-name"
-																														class="elementor-field elementor-size-sm  elementor-field-textual"
-																														placeholder="Name"> </div>
-																												<div
-																													class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-50 elementor-field-required">
-																													<label for="form-field-email"
-																														class="elementor-field-label elementor-screen-only">Email</label><input
-																														size="1" type="email" name="form_fields[email]"
-																														id="form-field-email"
-																														class="elementor-field elementor-size-sm  elementor-field-textual"
-																														placeholder="Email" required="required"
-																														aria-required="true"> </div>
-																												<div
-																													class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-b26ecb6 elementor-col-50 elementor-field-required">
-																													<label for="form-field-b26ecb6"
-																														class="elementor-field-label elementor-screen-only">Phone</label><input
-																														size="1" type="text" name="form_fields[b26ecb6]"
-																														id="form-field-b26ecb6"
-																														class="elementor-field elementor-size-sm  elementor-field-textual"
-																														placeholder="Telefone" required="required"
-																														aria-required="true"> </div>
-																												<div
-																													class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
-																													<label for="form-field-message"
-																														class="elementor-field-label elementor-screen-only">Message</label><textarea
-																														class="elementor-field-textual elementor-field  elementor-size-sm"
-																														name="form_fields[message]" id="form-field-message" rows="4"
-																														placeholder="Mensagem"></textarea> </div>
-																												<div
-																													class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
-																													<button type="submit"
-																														class="elementor-button elementor-size-sm">
-																														<span>
-																															<span class=" elementor-button-icon">
-																															</span>
-																															<span class="elementor-button-text">Enviar</span>
-																														</span>
-																													</button>
-																												</div>
-																											</div>
-																										</form>
-																									</div>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																					<div
-																						class="elementor-element elementor-element-fc8e7a9 elementor-column elementor-col-50 elementor-inner-column"
-																						data-id="fc8e7a9" data-element_type="column"
-																						data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-																						<div class="elementor-column-wrap  elementor-element-populated">
-																							<div class="elementor-widget-wrap">
-																								<div
-																									class="elementor-element elementor-element-71eb2d23 elementor-view-default elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box"
-																									data-id="71eb2d23" data-element_type="widget"
-																									data-widget_type="icon-box.default">
-																									<div class="elementor-widget-container">
-																										<div class="elementor-icon-box-wrapper">
-																											<div class="elementor-icon-box-icon">
-																												<span class="elementor-icon elementor-animation-">
-																													<i aria-hidden="true" class="fab fa-whatsapp"></i> </span>
-																											</div>
-																											<div class="elementor-icon-box-content">
-																												<h3 class="elementor-icon-box-title">
-																													<span>(55) 9 9723-9401</span>
-																												</h3>
-																											</div>
-																										</div>
-																									</div>
-																								</div>
-																								<div
-																									class="elementor-element elementor-element-286ed8e7 elementor-widget elementor-widget-text-editor"
-																									data-id="286ed8e7" data-element_type="widget"
-																									data-widget_type="text-editor.default">
-																									<div class="elementor-widget-container">
-																										<div class="elementor-text-editor elementor-clearfix">
-																											<p>Disponível das 10:00 as 19:00</p>
-																										</div>
-																									</div>
-																								</div>
-																								<div
-																									class="elementor-element elementor-element-2efefc74 elementor-widget elementor-widget-text-editor"
-																									data-id="2efefc74" data-element_type="widget"
-																									data-widget_type="text-editor.default">
-																									<div class="elementor-widget-container">
-																										<div class="elementor-text-editor elementor-clearfix">
-																											<p><b>Rua Riachuelo 219 &#8211; Centro Histórico &#8211; Porto
-																													Alegre</b></p>
-																										</div>
-																									</div>
-																								</div>
-																								<div
-																									class="elementor-element elementor-element-35511934 elementor-widget elementor-widget-text-editor"
-																									data-id="35511934" data-element_type="widget"
-																									data-widget_type="text-editor.default">
-																									<div class="elementor-widget-container">
-																										<div class="elementor-text-editor elementor-clearfix">
-																											<p><strong>Email lzembruzki@inf.ufrgs.br</strong></p>
-																										</div>
-																									</div>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</section>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</section>
+		</div>
+				<div class="elementor-element elementor-element-9f02ec2 elementor-column elementor-col-50 elementor-inner-column" data-id="9f02ec2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-beb818b elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="beb818b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#servicos" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">TRABALHOS</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1ae66bf elementor-column elementor-col-50 elementor-top-column" data-id="1ae66bf" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-d30ef52 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d30ef52" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-02c4e99 elementor-column elementor-col-100 elementor-top-column" data-id="02c4e99" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-b5d03c8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b5d03c8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-aff6a0e elementor-column elementor-col-100 elementor-top-column" data-id="aff6a0e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-981c390 elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline" data-id="981c390" data-element_type="widget" data-settings="{&quot;highlighted_text&quot;:&quot;eCommerce&quot;,&quot;headline_style&quot;:&quot;highlight&quot;,&quot;marker&quot;:&quot;circle&quot;}" data-widget_type="animated-headline.default">
+				<div class="elementor-widget-container">
+					<h3 class="elementor-headline">
+							<span class="elementor-headline-plain-text elementor-headline-text-wrapper">Desenvolvemos seu </span>
+						<span class="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper"></span>
+					</h3>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-f21d27f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="f21d27f" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cd4130e elementor-column elementor-col-50 elementor-inner-column" data-id="cd4130e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3fc7876 elementor-widget elementor-widget-heading" data-id="3fc7876" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Integração com os correios para cálculo de frete</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-cb750d2 elementor-widget elementor-widget-image" data-id="cb750d2" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://blinkstore.com.br/wp-content/uploads/2020/08/correios-1024x572-1.jpg" title="correios-1024&#215;572 (1)" alt="correios-1024x572 (1)" />											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-d8f68aa elementor-column elementor-col-50 elementor-inner-column" data-id="d8f68aa" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c6b2413 elementor-widget elementor-widget-heading" data-id="c6b2413" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Integração com os principais gateways de pagamento</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-acdc667 elementor-widget elementor-widget-image" data-id="acdc667" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://blinkstore.com.br/wp-content/uploads/2020/08/pagseguro-ou-mercado-pago.png" title="pagseguro-ou-mercado-pago" alt="pagseguro-ou-mercado-pago" />											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-5c3e6f8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5c3e6f8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a81dd55 elementor-column elementor-col-100 elementor-top-column" data-id="a81dd55" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b22befc elementor-widget elementor-widget-heading" data-id="b22befc" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Mais funcionalidades</h2>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-7bc7866 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7bc7866" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-11b8596 elementor-column elementor-col-50 elementor-top-column" data-id="11b8596" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a3735ee elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="a3735ee" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Carrinho de compras</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Gerenciamento de cupons de desconto</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Integração com email<br></span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Lista de desejos</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Gerenciamento de produtos e pedidos</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2b2d2c8 elementor-column elementor-col-50 elementor-top-column" data-id="2b2d2c8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-caa8581 elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="caa8581" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Integração de catálogo com Facebook e Instagram</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Taxas de envio personalizáveis</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Sacolinha de produtos no instagram</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Pagamento seguro e trasparente ao cliente</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+										<span class="elementor-icon-list-text">Criação de promoções</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-ce02b41 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ce02b41" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6d89173 elementor-column elementor-col-100 elementor-top-column" data-id="6d89173" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2e7b5f9 elementor-widget elementor-widget-menu-anchor" data-id="2e7b5f9" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="servicos" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2e8a3fba elementor-widget elementor-widget-heading" data-id="2e8a3fba" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Nossos trabalhos recentes</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a51e7d9 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="a51e7d9" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://eletronicosdk.com.br" target="_blank" rel="nofollow">
+							<img width="1024" height="471" src="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.56.22-1024x471.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.56.22-1024x471.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.56.22-300x138.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.56.22-768x354.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.56.22.png 1440w" sizes="(max-width: 1024px) 100vw, 1024px" />								</a>
 											</div>
-										</div>
-									</div>
-
-
-								</div>
-
-							</article>
-
-
-						</div><!-- #content -->
-
-
-					</div><!-- #primary -->
-
-
-				</div><!-- #content-wrap -->
-
-
-
-			</main><!-- #main -->
-
-
-
-
-
-			<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter"
-				role="contentinfo">
-
-
-				<div id="footer-inner" class="clr">
-
-
-
-					<div id="footer-widgets" class="oceanwp-row clr">
-
-
-						<div class="footer-widgets-inner">
-
-							<div data-elementor-type="wp-post" data-elementor-id="395" class="elementor elementor-395"
-								data-elementor-settings="[]">
-								<div class="elementor-inner">
-									<div class="elementor-section-wrap">
-										<footer
-											class="elementor-element elementor-element-4033c246 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-											data-id="4033c246" data-element_type="section"
-											data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-											<div class="elementor-container elementor-column-gap-default">
-												<div class="elementor-row">
-													<div
-														class="elementor-element elementor-element-61db6796 elementor-column elementor-col-100 elementor-top-column"
-														data-id="61db6796" data-element_type="column">
-														<div class="elementor-column-wrap  elementor-element-populated">
-															<div class="elementor-widget-wrap">
-																<section
-																	class="elementor-element elementor-element-18970c93 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section"
-																	data-id="18970c93" data-element_type="section">
-																	<div class="elementor-container elementor-column-gap-default">
-																		<div class="elementor-row">
-																			<div
-																				class="elementor-element elementor-element-3e2f405c elementor-column elementor-col-20 elementor-inner-column"
-																				data-id="3e2f405c" data-element_type="column">
-																				<div class="elementor-column-wrap  elementor-element-populated">
-																					<div class="elementor-widget-wrap">
-																						<div
-																							class="elementor-element elementor-element-69429e80 elementor-widget elementor-widget-heading"
-																							data-id="69429e80" data-element_type="widget"
-																							data-widget_type="heading.default">
-																							<div class="elementor-widget-container">
-																								<h4 class="elementor-heading-title elementor-size-default">Get Started
-																								</h4>
-																							</div>
-																						</div>
-																						<div
-																							class="elementor-element elementor-element-4ad49508 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list"
-																							data-id="4ad49508" data-element_type="widget"
-																							data-widget_type="icon-list.default">
-																							<div class="elementor-widget-container">
-																								<ul class="elementor-icon-list-items">
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Resources</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Tutorials</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Examples</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Docs</span>
-																									</li>
-																								</ul>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<div
-																				class="elementor-element elementor-element-352df55 elementor-column elementor-col-20 elementor-inner-column"
-																				data-id="352df55" data-element_type="column">
-																				<div class="elementor-column-wrap  elementor-element-populated">
-																					<div class="elementor-widget-wrap">
-																						<div
-																							class="elementor-element elementor-element-6eadef35 elementor-widget elementor-widget-heading"
-																							data-id="6eadef35" data-element_type="widget"
-																							data-widget_type="heading.default">
-																							<div class="elementor-widget-container">
-																								<h4 class="elementor-heading-title elementor-size-default">About</h4>
-																							</div>
-																						</div>
-																						<div
-																							class="elementor-element elementor-element-40b1aa60 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list"
-																							data-id="40b1aa60" data-element_type="widget"
-																							data-widget_type="icon-list.default">
-																							<div class="elementor-widget-container">
-																								<ul class="elementor-icon-list-items">
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Stories</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Community</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Blog</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Brand Assets</span>
-																									</li>
-																								</ul>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<div
-																				class="elementor-element elementor-element-65202c27 elementor-column elementor-col-20 elementor-inner-column"
-																				data-id="65202c27" data-element_type="column">
-																				<div class="elementor-column-wrap  elementor-element-populated">
-																					<div class="elementor-widget-wrap">
-																						<div
-																							class="elementor-element elementor-element-7b8c023b elementor-widget elementor-widget-heading"
-																							data-id="7b8c023b" data-element_type="widget"
-																							data-widget_type="heading.default">
-																							<div class="elementor-widget-container">
-																								<h4 class="elementor-heading-title elementor-size-default">Features</h4>
-																							</div>
-																						</div>
-																						<div
-																							class="elementor-element elementor-element-a0e2839 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list"
-																							data-id="a0e2839" data-element_type="widget"
-																							data-widget_type="icon-list.default">
-																							<div class="elementor-widget-container">
-																								<ul class="elementor-icon-list-items">
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Overview</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Design</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Code</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-text">Collaborate</span>
-																									</li>
-																								</ul>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<div
-																				class="elementor-element elementor-element-736182a elementor-column elementor-col-20 elementor-inner-column"
-																				data-id="736182a" data-element_type="column">
-																				<div class="elementor-column-wrap  elementor-element-populated">
-																					<div class="elementor-widget-wrap">
-																						<div
-																							class="elementor-element elementor-element-7e093446 elementor-widget elementor-widget-heading"
-																							data-id="7e093446" data-element_type="widget"
-																							data-widget_type="heading.default">
-																							<div class="elementor-widget-container">
-																								<h4 class="elementor-heading-title elementor-size-default">Follow Us
-																								</h4>
-																							</div>
-																						</div>
-																						<div
-																							class="elementor-element elementor-element-36e72269 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list"
-																							data-id="36e72269" data-element_type="widget"
-																							data-widget_type="icon-list.default">
-																							<div class="elementor-widget-container">
-																								<ul class="elementor-icon-list-items">
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-icon">
-																											<i aria-hidden="true" class="fab fa-facebook"></i> </span>
-																										<span class="elementor-icon-list-text">Facebook</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-icon">
-																											<i aria-hidden="true" class="fab fa-twitter"></i> </span>
-																										<span class="elementor-icon-list-text">Twitter</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-icon">
-																											<i aria-hidden="true" class="fab fa-youtube"></i> </span>
-																										<span class="elementor-icon-list-text">YouTube</span>
-																									</li>
-																									<li class="elementor-icon-list-item">
-																										<span class="elementor-icon-list-icon">
-																											<i aria-hidden="true" class="fab fa-instagram"></i> </span>
-																										<span class="elementor-icon-list-text">Instagram</span>
-																									</li>
-																								</ul>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<div
-																				class="elementor-element elementor-element-3a7526b elementor-column elementor-col-20 elementor-inner-column"
-																				data-id="3a7526b" data-element_type="column">
-																				<div class="elementor-column-wrap  elementor-element-populated">
-																					<div class="elementor-widget-wrap">
-																						<div
-																							class="elementor-element elementor-element-573812b elementor-button-align-stretch elementor-widget elementor-widget-form"
-																							data-id="573812b" data-element_type="widget"
-																							data-settings="{&quot;step_next_label&quot;:&quot;Pr\u00f3ximo&quot;,&quot;step_previous_label&quot;:&quot;Anterior&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
-																							data-widget_type="form.default">
-																							<div class="elementor-widget-container">
-																								<form class="elementor-form" method="post" name="New Form">
-																									<input type="hidden" name="post_id" value="395" />
-																									<input type="hidden" name="form_id" value="573812b" />
-
-																									<input type="hidden" name="queried_id" value="136" />
-
-																									<div class="elementor-form-fields-wrapper elementor-labels-">
-																										<div
-																											class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
-																											<label for="form-field-email"
-																												class="elementor-field-label elementor-screen-only">Email</label><input
-																												size="1" type="email" name="form_fields[email]"
-																												id="form-field-email"
-																												class="elementor-field elementor-size-md  elementor-field-textual"
-																												placeholder="Email" required="required" aria-required="true">
-																										</div>
-																										<div
-																											class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
-																											<button type="submit" class="elementor-button elementor-size-md">
-																												<span>
-																													<span class=" elementor-button-icon">
-																													</span>
-																													<span class="elementor-button-text">Inscreva-se</span>
-																												</span>
-																											</button>
-																										</div>
-																									</div>
-																								</form>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</section>
-																<section
-																	class="elementor-element elementor-element-14f66bce elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section"
-																	data-id="14f66bce" data-element_type="section">
-																	<div class="elementor-container elementor-column-gap-default">
-																		<div class="elementor-row">
-																			<div
-																				class="elementor-element elementor-element-5a8188be elementor-column elementor-col-50 elementor-inner-column"
-																				data-id="5a8188be" data-element_type="column">
-																				<div class="elementor-column-wrap  elementor-element-populated">
-																					<div class="elementor-widget-wrap">
-																						<div
-																							class="elementor-element elementor-element-15dbd75b elementor-widget elementor-widget-theme-site-logo elementor-widget-image"
-																							data-id="15dbd75b" data-element_type="widget"
-																							data-widget_type="theme-site-logo.default">
-																							<div class="elementor-widget-container">
-																								<div class="elementor-image">
-																									<a href="https://blinkstore.com.br">
-																										<img width="1024" height="213"
-																											src="https://blinkstore.com.br/wp-content/uploads/2020/08/porto-1024x213.png"
-																											class="attachment-large size-large" alt="" loading="lazy"
-																											srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/porto-1024x213.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-300x62.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-768x160.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-1536x319.png 1536w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto.png 2003w"
-																											sizes="(max-width: 1024px) 100vw, 1024px" /> </a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<div
-																				class="elementor-element elementor-element-70d62e87 elementor-column elementor-col-50 elementor-inner-column"
-																				data-id="70d62e87" data-element_type="column">
-																				<div class="elementor-column-wrap  elementor-element-populated">
-																					<div class="elementor-widget-wrap">
-																						<div
-																							class="elementor-element elementor-element-84e5906 elementor-widget elementor-widget-heading"
-																							data-id="84e5906" data-element_type="widget"
-																							data-widget_type="heading.default">
-																							<div class="elementor-widget-container">
-																								<p class="elementor-heading-title elementor-size-default">Copyright 2020
-																									© All rights Reserved. Design by Porto eCommerce</p>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</section>
-															</div>
-														</div>
-													</div>
-												</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cbf6d3a elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="cbf6d3a" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1024" height="500" src="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.58.51-1024x500.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.58.51-1024x500.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.58.51-300x146.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.58.51-768x375.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.58.51.png 1438w" sizes="(max-width: 1024px) 100vw, 1024px" />											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c86e272 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="c86e272" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1024" height="501" src="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-03.02.27-1024x501.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-03.02.27-1024x501.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-03.02.27-300x147.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-03.02.27-768x376.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-03.02.27.png 1436w" sizes="(max-width: 1024px) 100vw, 1024px" />											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c66b4b4 elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="c66b4b4" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1024" height="499" src="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-17.03.05-1024x499.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-17.03.05-1024x499.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-17.03.05-300x146.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-17.03.05-768x374.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-17.03.05.png 1440w" sizes="(max-width: 1024px) 100vw, 1024px" />											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8c1e65a elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image" data-id="8c1e65a" data-element_type="widget" data-widget_type="theme-post-featured-image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://glclothing.com.br" target="_blank" rel="nofollow">
+							<img width="1024" height="472" src="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.55.11-1024x472.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.55.11-1024x472.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.55.11-300x138.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.55.11-768x354.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/Screen-Shot-2020-08-25-at-02.55.11.png 1439w" sizes="(max-width: 1024px) 100vw, 1024px" />								</a>
 											</div>
-										</footer>
-									</div>
-								</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<section class="elementor-element elementor-element-572ee4ad elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="572ee4ad" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6865c618 elementor-column elementor-col-100 elementor-top-column" data-id="6865c618" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6e4fbfe elementor-widget elementor-widget-menu-anchor" data-id="6e4fbfe" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="contato" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-48dcc35c elementor-widget elementor-widget-heading" data-id="48dcc35c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Solicite um orçamento</h3>		</div>
+				</div>
+				<section class="elementor-element elementor-element-36997f55 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="36997f55" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-no">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-42504b64 elementor-column elementor-col-50 elementor-inner-column" data-id="42504b64" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4b482126 elementor-button-align-end elementor-mobile-button-align-center elementor-widget elementor-widget-form" data-id="4b482126" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Pr\u00f3ximo&quot;,&quot;step_previous_label&quot;:&quot;Anterior&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-form" method="post" name="New Form">
+			<input type="hidden" name="post_id" value="136"/>
+			<input type="hidden" name="form_id" value="4b482126"/>
+
+							<input type="hidden" name="queried_id" value="136"/>
+
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-name elementor-col-50">
+					<label for="form-field-name" class="elementor-field-label elementor-screen-only">Nome</label><input size="1" type="text" name="form_fields[name]" id="form-field-name" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Name">				</div>
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-50 elementor-field-required">
+					<label for="form-field-email" class="elementor-field-label elementor-screen-only">Email</label><input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Email" required="required" aria-required="true">				</div>
+								<div class="elementor-field-type-text elementor-field-group elementor-column elementor-field-group-b26ecb6 elementor-col-50 elementor-field-required">
+					<label for="form-field-b26ecb6" class="elementor-field-label elementor-screen-only">Phone</label><input size="1" type="text" name="form_fields[b26ecb6]" id="form-field-b26ecb6" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Telefone" required="required" aria-required="true">				</div>
+								<div class="elementor-field-type-textarea elementor-field-group elementor-column elementor-field-group-message elementor-col-100">
+					<label for="form-field-message" class="elementor-field-label elementor-screen-only">Message</label><textarea class="elementor-field-textual elementor-field  elementor-size-sm" name="form_fields[message]" id="form-field-message" rows="4" placeholder="Mensagem"></textarea>				</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button type="submit" class="elementor-button elementor-size-sm">
+						<span >
+															<span class=" elementor-button-icon">
+																										</span>
+																						<span class="elementor-button-text">Enviar</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-fc8e7a9 elementor-column elementor-col-50 elementor-inner-column" data-id="fc8e7a9" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-71eb2d23 elementor-view-default elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="71eb2d23" data-element_type="widget" data-widget_type="icon-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-box-wrapper">
+						<div class="elementor-icon-box-icon">
+				<span class="elementor-icon elementor-animation-" >
+				<i aria-hidden="true" class="fab fa-whatsapp"></i>				</span>
+			</div>
+						<div class="elementor-icon-box-content">
+				<h3 class="elementor-icon-box-title">
+					<span >(55) 9 9723-9401</span>
+				</h3>
 							</div>
-
-						</div><!-- .container -->
-
-
-					</div><!-- #footer-widgets -->
-
-
-
-					<div id="footer-bottom" class="clr no-footer-nav">
-
-
-						<div id="footer-bottom-inner" class="container clr">
-
-
-
-							<div id="copyright" class="clr" role="contentinfo">
-								Created with <a href="https://oceanwp.org" target="_blank">OceanWP</a> </div><!-- #copyright -->
-
-
-						</div><!-- #footer-bottom-inner -->
-
-
-					</div><!-- #footer-bottom -->
-
-
-				</div><!-- #footer-inner -->
-
-
-			</footer><!-- #footer -->
-
-
-
-		</div><!-- #wrap -->
-
-
-	</div><!-- #outer-wrap -->
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-286ed8e7 elementor-widget elementor-widget-text-editor" data-id="286ed8e7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Disponível das 10:00 as 19:00</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2efefc74 elementor-widget elementor-widget-text-editor" data-id="2efefc74" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Rua Riachuelo 219 &#8211; Centro Histórico &#8211; Porto Alegre</b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-35511934 elementor-widget elementor-widget-text-editor" data-id="35511934" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Email lzembruzki@inf.ufrgs.br</strong></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
 
 
+</div>
 
-	<a id="scroll-top" class="scroll-top-right" href="#"><span class="fa fa-level-up"
-			aria-label="Scroll to the top of the page"></span></a>
-
-
+</article>
 
 
-	<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/imagesloaded.min.js?ver=4.1.4'
-		id='imagesloaded-js'></script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/js/third/magnific-popup.min.js?ver=1.8.7'
-		id='magnific-popup-js'></script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/js/third/lightbox.min.js?ver=1.8.7'
-		id='oceanwp-lightbox-js'></script>
-	<script type='text/javascript' id='oceanwp-main-js-extra'>
-		/* <![CDATA[ */
-		var oceanwpLocalize = { "isRTL": "", "menuSearchStyle": "disabled", "sidrSource": null, "sidrDisplace": "1", "sidrSide": "left", "sidrDropdownTarget": "link", "verticalHeaderTarget": "link", "customSelects": ".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select", "ajax_url": "https:\/\/blinkstore.com.br\/wp-admin\/admin-ajax.php" };
+			</div><!-- #content -->
+
+
+		</div><!-- #primary -->
+
+
+	</div><!-- #content-wrap -->
+
+
+
+	</main><!-- #main -->
+
+
+
+
+
+<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter" role="contentinfo">
+
+
+	<div id="footer-inner" class="clr">
+
+
+
+<div id="footer-widgets" class="oceanwp-row clr">
+
+
+	<div class="footer-widgets-inner">
+
+				<div data-elementor-type="wp-post" data-elementor-id="395" class="elementor elementor-395" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<footer class="elementor-element elementor-element-4033c246 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4033c246" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-61db6796 elementor-column elementor-col-100 elementor-top-column" data-id="61db6796" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-18970c93 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="18970c93" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3e2f405c elementor-column elementor-col-20 elementor-inner-column" data-id="3e2f405c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-69429e80 elementor-widget elementor-widget-heading" data-id="69429e80" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Get Started</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4ad49508 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="4ad49508" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Resources</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Tutorials</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Examples</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Docs</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-352df55 elementor-column elementor-col-20 elementor-inner-column" data-id="352df55" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6eadef35 elementor-widget elementor-widget-heading" data-id="6eadef35" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">About</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-40b1aa60 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="40b1aa60" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Stories</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Community</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Blog</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Brand Assets</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-65202c27 elementor-column elementor-col-20 elementor-inner-column" data-id="65202c27" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7b8c023b elementor-widget elementor-widget-heading" data-id="7b8c023b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Features</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a0e2839 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="a0e2839" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Overview</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Design</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Code</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+										<span class="elementor-icon-list-text">Collaborate</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-736182a elementor-column elementor-col-20 elementor-inner-column" data-id="736182a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7e093446 elementor-widget elementor-widget-heading" data-id="7e093446" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Follow Us</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-36e72269 elementor-align-left elementor-icon-list--layout-traditional elementor-widget elementor-widget-icon-list" data-id="36e72269" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-facebook"></i>						</span>
+										<span class="elementor-icon-list-text">Facebook</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-twitter"></i>						</span>
+										<span class="elementor-icon-list-text">Twitter</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-youtube"></i>						</span>
+										<span class="elementor-icon-list-text">YouTube</span>
+									</li>
+								<li class="elementor-icon-list-item" >
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-instagram"></i>						</span>
+										<span class="elementor-icon-list-text">Instagram</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3a7526b elementor-column elementor-col-20 elementor-inner-column" data-id="3a7526b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-573812b elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="573812b" data-element_type="widget" data-settings="{&quot;step_next_label&quot;:&quot;Pr\u00f3ximo&quot;,&quot;step_previous_label&quot;:&quot;Anterior&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
+				<div class="elementor-widget-container">
+					<form class="elementor-form" method="post" name="New Form">
+			<input type="hidden" name="post_id" value="395"/>
+			<input type="hidden" name="form_id" value="573812b"/>
+
+							<input type="hidden" name="queried_id" value="136"/>
+
+			<div class="elementor-form-fields-wrapper elementor-labels-">
+								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-100 elementor-field-required">
+					<label for="form-field-email" class="elementor-field-label elementor-screen-only">Email</label><input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-md  elementor-field-textual" placeholder="Email" required="required" aria-required="true">				</div>
+								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+					<button type="submit" class="elementor-button elementor-size-md">
+						<span >
+															<span class=" elementor-button-icon">
+																										</span>
+																						<span class="elementor-button-text">Inscreva-se</span>
+													</span>
+					</button>
+				</div>
+			</div>
+		</form>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+				<div class="elementor-element elementor-element-887dddb elementor-widget elementor-widget-html" data-id="887dddb" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=5555997239401&text=Oi%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20o%20desenvolvimento%20do%20eCommerce" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>		</div>
+				</div>
+				<section class="elementor-element elementor-element-14f66bce elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="14f66bce" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5a8188be elementor-column elementor-col-50 elementor-inner-column" data-id="5a8188be" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-15dbd75b elementor-widget elementor-widget-theme-site-logo elementor-widget-image" data-id="15dbd75b" data-element_type="widget" data-widget_type="theme-site-logo.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a href="https://blinkstore.com.br">
+							<img width="1024" height="213" src="https://blinkstore.com.br/wp-content/uploads/2020/08/porto-1024x213.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://blinkstore.com.br/wp-content/uploads/2020/08/porto-1024x213.png 1024w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-300x62.png 300w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-768x160.png 768w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto-1536x319.png 1536w, https://blinkstore.com.br/wp-content/uploads/2020/08/porto.png 2003w" sizes="(max-width: 1024px) 100vw, 1024px" />								</a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-70d62e87 elementor-column elementor-col-50 elementor-inner-column" data-id="70d62e87" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-84e5906 elementor-widget elementor-widget-heading" data-id="84e5906" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Copyright 2020 © All rights Reserved. Design by Porto eCommerce</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</footer>
+						</div>
+			</div>
+		</div>
+
+	</div><!-- .container -->
+
+
+</div><!-- #footer-widgets -->
+
+
+
+<div id="footer-bottom" class="clr no-footer-nav">
+
+
+	<div id="footer-bottom-inner" class="container clr">
+
+
+
+			<div id="copyright" class="clr" role="contentinfo">
+				Created with <a href="https://oceanwp.org" target="_blank">OceanWP</a>			</div><!-- #copyright -->
+
+
+	</div><!-- #footer-bottom-inner -->
+
+
+</div><!-- #footer-bottom -->
+
+
+	</div><!-- #footer-inner -->
+
+
+</footer><!-- #footer -->
+
+
+
+</div><!-- #wrap -->
+
+
+</div><!-- #outer-wrap -->
+
+
+
+<a id="scroll-top" class="scroll-top-left" href="#"><span class="fa fa-angle-up" aria-label="Scroll to the top of the page"></span></a>
+
+
+
+
+<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/imagesloaded.min.js?ver=4.1.4' id='imagesloaded-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/js/third/magnific-popup.min.js?ver=1.8.7' id='magnific-popup-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/js/third/lightbox.min.js?ver=1.8.7' id='oceanwp-lightbox-js'></script>
+<script type='text/javascript' id='oceanwp-main-js-extra'>
+/* <![CDATA[ */
+var oceanwpLocalize = {"isRTL":"","menuSearchStyle":"disabled","sidrSource":null,"sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"link","verticalHeaderTarget":"link","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select","ajax_url":"https:\/\/blinkstore.com.br\/wp-admin\/admin-ajax.php"};
 /* ]]> */
-	</script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/js/main.min.js?ver=1.8.7'
-		id='oceanwp-main-js'></script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/ocean-extra/includes/widgets/js/mailchimp.min.js?ver=5.5'
-		id='oe-mailchimp-script-js'></script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/ocean-product-sharing/assets/js/social.min.js?ver=1.1.0'
-		id='ops-product-share-script-js'></script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/ocean-social-sharing/assets/js/social.min.js?ver=1.1.0'
-		id='oss-social-share-script-js'></script>
-	<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/wp-embed.min.js?ver=5.5'
-		id='wp-embed-js'></script>
-	<!--[if lt IE 9]>
+</script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/js/main.min.js?ver=1.8.7' id='oceanwp-main-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/ocean-extra/includes/widgets/js/mailchimp.min.js?ver=5.5' id='oe-mailchimp-script-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/ocean-product-sharing/assets/js/social.min.js?ver=1.1.0' id='ops-product-share-script-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/ocean-social-sharing/assets/js/social.min.js?ver=1.1.0' id='oss-social-share-script-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/wp-embed.min.js?ver=5.5' id='wp-embed-js'></script>
+<!--[if lt IE 9]>
 <script type='text/javascript' src='https://blinkstore.com.br/wp-content/themes/oceanwp/assets/js/third/html5.min.js?ver=1.8.7' id='html5shiv-js'></script>
 <![endif]-->
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.14'
-		id='elementor-frontend-modules-js'></script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=2.10.3'
-		id='elementor-sticky-js'></script>
-	<script type='text/javascript' id='elementor-pro-frontend-js-before'>
-		var ElementorProFrontendConfig = { "ajaxurl": "https:\/\/blinkstore.com.br\/wp-admin\/admin-ajax.php", "nonce": "f0b1a6878d", "i18n": { "toc_no_headings_found": "No headings were found on this page." }, "shareButtonsNetworks": { "facebook": { "title": "Facebook", "has_counter": true }, "twitter": { "title": "Twitter" }, "google": { "title": "Google+", "has_counter": true }, "linkedin": { "title": "LinkedIn", "has_counter": true }, "pinterest": { "title": "Pinterest", "has_counter": true }, "reddit": { "title": "Reddit", "has_counter": true }, "vk": { "title": "VK", "has_counter": true }, "odnoklassniki": { "title": "OK", "has_counter": true }, "tumblr": { "title": "Tumblr" }, "delicious": { "title": "Delicious" }, "digg": { "title": "Digg" }, "skype": { "title": "Skype" }, "stumbleupon": { "title": "StumbleUpon", "has_counter": true }, "mix": { "title": "Mix" }, "telegram": { "title": "Telegram" }, "pocket": { "title": "Pocket", "has_counter": true }, "xing": { "title": "XING", "has_counter": true }, "whatsapp": { "title": "WhatsApp" }, "email": { "title": "Email" }, "print": { "title": "Print" } }, "facebook_sdk": { "lang": "pt_PT", "app_id": "" }, "lottie": { "defaultAnimationUrl": "https:\/\/blinkstore.com.br\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json" } };
-	</script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=2.10.3'
-		id='elementor-pro-frontend-js'></script>
-	<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'
-		id='jquery-ui-position-js'></script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.6'
-		id='elementor-dialog-js'></script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'
-		id='elementor-waypoints-js'></script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'
-		id='swiper-js'></script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=2.9.14'
-		id='share-link-js'></script>
-	<script type='text/javascript' id='elementor-frontend-js-before'>
-		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "downloadImage": "Download image" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "version": "2.9.14", "urls": { "assets": "https:\/\/blinkstore.com.br\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "general": { "elementor_global_image_lightbox": "yes", "elementor_lightbox_enable_counter": "yes", "elementor_lightbox_enable_fullscreen": "yes", "elementor_lightbox_enable_zoom": "yes", "elementor_lightbox_enable_share": "yes", "elementor_lightbox_title_src": "title", "elementor_lightbox_description_src": "description" }, "editorPreferences": [] }, "post": { "id": 136, "title": "My%20Blog%20%E2%80%93%20My%20WordPress%20Blog", "excerpt": "", "featuredImage": false } };
-	</script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.9.14'
-		id='elementor-frontend-js'></script>
-	<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/underscore.min.js?ver=1.8.3'
-		id='underscore-js'></script>
-	<script type='text/javascript' id='wp-util-js-extra'>
-		/* <![CDATA[ */
-		var _wpUtilSettings = { "ajax": { "url": "\/wp-admin\/admin-ajax.php" } };
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.9.14' id='elementor-frontend-modules-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=2.10.3' id='elementor-sticky-js'></script>
+<script type='text/javascript' id='elementor-pro-frontend-js-before'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/blinkstore.com.br\/wp-admin\/admin-ajax.php","nonce":"f0b1a6878d","i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"pt_PT","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/blinkstore.com.br\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=2.10.3' id='elementor-pro-frontend-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4' id='jquery-ui-position-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.6' id='elementor-dialog-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' id='swiper-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=2.9.14' id='share-link-js'></script>
+<script type='text/javascript' id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","downloadImage":"Download image"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.9.14","urls":{"assets":"https:\/\/blinkstore.com.br\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_lightbox_enable_counter":"yes","elementor_lightbox_enable_fullscreen":"yes","elementor_lightbox_enable_zoom":"yes","elementor_lightbox_enable_share":"yes","elementor_lightbox_title_src":"title","elementor_lightbox_description_src":"description"},"editorPreferences":[]},"post":{"id":136,"title":"Porto%20eCommerce%20%E2%80%93%20Desenvolvendo%20a%20solu%C3%A7%C3%A3o%20do%20seu%20eCommerce","excerpt":"","featuredImage":false}};
+</script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.9.14' id='elementor-frontend-js'></script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/underscore.min.js?ver=1.8.3' id='underscore-js'></script>
+<script type='text/javascript' id='wp-util-js-extra'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
 /* ]]> */
-	</script>
-	<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/wp-util.min.js?ver=5.5'
-		id='wp-util-js'></script>
-	<script type='text/javascript' id='wpforms-elementor-js-extra'>
-		/* <![CDATA[ */
-		var wpformsElementorVars = { "recaptcha_type": "v2" };
+</script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-includes/js/wp-util.min.js?ver=5.5' id='wp-util-js'></script>
+<script type='text/javascript' id='wpforms-elementor-js-extra'>
+/* <![CDATA[ */
+var wpformsElementorVars = {"recaptcha_type":"v2"};
 /* ]]> */
-	</script>
-	<script type='text/javascript'
-		src='https://blinkstore.com.br/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.6.2.2'
-		id='wpforms-elementor-js'></script>
+</script>
+<script type='text/javascript' src='https://blinkstore.com.br/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.6.2.2' id='wpforms-elementor-js'></script>
 </body>
-
 </html>
